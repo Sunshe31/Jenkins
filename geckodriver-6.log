@@ -1,0 +1,67 @@
+1703753603764	geckodriver	INFO	Listening on 127.0.0.1:52117
+1703753606800	mozrunner::runner	INFO	Running command: "C:\\Users\\Archimedis Digital\\.cache\\selenium\\firefox\\win64\\121.0\\firefox.exe" "--marionette" "--remo ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ARCHIM~1\\AppData\\Local\\Temp\\rust_mozprofileZTbAgS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703753607282	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703753607393	Marionette	INFO	Listening on port 52127
+WebDriver BiDi listening on ws://127.0.0.1:52118
+Read port: 52127
+1703753607630	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52118/devtools/browser/12a2d905-3ce7-47e6-ab89-5ebe8ff0dbd3
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 2822 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914, line 73: Script terminated by timeout at:
+n.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:73:202
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+n.ta@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:117:219
+Vc.prototype.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:87:1054
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+Lc.prototype.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:85:601
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+Jh/c/</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:148:320
+Ua@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:44:339
+Ra.prototype.flush@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:44:127
+Ta@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:43:466
+Jh/c/</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:148:292
+n.Id@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:75:425
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:74:439
+n.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:73:223
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+Sg/</</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:134:237
+Qa.prototype.Zb/<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:43:298
+Sg/</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:134:246
+n.Id@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:75:425
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:74:439
+n.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:73:223
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+Sg/</</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:134:237
+Qa.prototype.Zb/<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:43:298
+Sg/</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:134:246
+n.Id@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:75:425
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:74:439
+n.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:73:223
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+nd/</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:93:671
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/libs.js?ver=6.4.2, line 398: TypeError: g.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/libs.js?ver=6.4.2, line 398: TypeError: g.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/libs.js?ver=6.4.2, line 398: TypeError: g.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 5133 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1703753639049	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c, line 463: Script terminated by timeout at:
+aa.wh@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:463:89
+get@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:119
+stop@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:87
+aa.Jk/c/<@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:412
+
+1703753647824	Marionette	INFO	Stopped listening on port 52127
+Dynamically enable window occlusion 1

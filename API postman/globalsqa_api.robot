@@ -26,4 +26,4 @@ Global SQA
     Mouse Over    (//a[@class="no_border"])[2]
 
     Should Be Equal As Numbers    ${post.status_code}    200
-    Log    ${post.text}
+    Log    ${post.text}    
