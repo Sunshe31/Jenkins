@@ -4,7 +4,7 @@ Library    RequestsLibrary
 *** Variables ***
 ${BASE_URL}    https://mail.google.com/mail
 ${user}    itsmeaishu3103@example.com
-${pass}    Sunsh#123
+${pass}    Susnjjn#123
 
 *** Test Cases ***
 Mail
