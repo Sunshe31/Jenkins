@@ -1,0 +1,56 @@
+1703748516191	geckodriver	INFO	Listening on 127.0.0.1:50123
+1703748519280	mozrunner::runner	INFO	Running command: "C:\\Users\\Archimedis Digital\\.cache\\selenium\\firefox\\win64\\121.0\\firefox.exe" "--marionette" "--remo ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ARCHIM~1\\AppData\\Local\\Temp\\rust_mozprofileTPstmv"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703748520130	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703748520279	Marionette	INFO	Listening on port 50137
+WebDriver BiDi listening on ws://127.0.0.1:50124
+Read port: 50137
+1703748520556	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50124/devtools/browser/a9b4aef6-e26f-4659-a019-8dfac2263368
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 174 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1703748551678	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914, line 231: Script terminated by timeout at:
+Nm@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:231:326
+uo/<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:257:462
+Lc.prototype.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:85:513
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+Jh/c/</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:148:320
+Ua@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:44:339
+Ra.prototype.flush@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:44:127
+Ta@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:43:466
+Jh/c/</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:148:292
+n.Id@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:75:425
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:74:439
+n.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:73:223
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+Sg/</</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:134:237
+Qa.prototype.Zb/<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:43:298
+Sg/</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:134:246
+n.Id@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:75:425
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:74:439
+n.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:73:223
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+Sg/</</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:134:237
+Qa.prototype.Zb/<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:43:298
+Sg/</</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:134:246
+n.Id@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:75:425
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:74:439
+n.o@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:73:223
+n.next@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:72:859
+nd/</<@https://www.googletagservices.com/activeview/js/current/ufs_web_display.js?cache=r20110914:93:671
+
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/libs.js?ver=6.4.2, line 398: TypeError: g.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 3670 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1703749575202	Marionette	INFO	Stopped listening on port 50137
+Dynamically enable window occlusion 1

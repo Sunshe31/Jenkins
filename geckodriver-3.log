@@ -1,0 +1,36 @@
+1703749138048	geckodriver	INFO	Listening on 127.0.0.1:53210
+1703749141078	mozrunner::runner	INFO	Running command: "C:\\Users\\Archimedis Digital\\.cache\\selenium\\firefox\\win64\\121.0\\firefox.exe" "--marionette" "--remo ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ARCHIM~1\\AppData\\Local\\Temp\\rust_mozprofileUW2jsi"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703749141743	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703749141888	Marionette	INFO	Listening on port 53227
+Read port: 53227
+WebDriver BiDi listening on ws://127.0.0.1:53211
+1703749141991	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:53211/devtools/browser/417aff0d-4a1b-4bb8-8f70-c5f7ab9243fd
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/libs.js?ver=6.4.2, line 398: TypeError: g.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 5444 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1703749173096	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c, line 463: Script terminated by timeout at:
+aa.wh@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:463:89
+get@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:119
+stop@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:87
+aa.Jk/c/<@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:412
+
+1703749433620	Marionette	INFO	Stopped listening on port 53227
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.

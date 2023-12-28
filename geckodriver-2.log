@@ -1,0 +1,50 @@
+1703748536295	geckodriver	INFO	Listening on 127.0.0.1:50202
+1703748539349	mozrunner::runner	INFO	Running command: "C:\\Users\\Archimedis Digital\\.cache\\selenium\\firefox\\win64\\121.0\\firefox.exe" "--marionette" "--remo ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ARCHIM~1\\AppData\\Local\\Temp\\rust_mozprofilerj2DfG"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703748539827	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703748539960	Marionette	INFO	Listening on port 50210
+WebDriver BiDi listening on ws://127.0.0.1:50203
+Read port: 50210
+1703748540207	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50203/devtools/browser/79430f4b-b28b-4a87-8366-a73570006a3a
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/libs.js?ver=6.4.2, line 398: TypeError: g.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/libs.js?ver=6.4.2, line 398: TypeError: g.browser is undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/libs.js?ver=6.4.2, line 398: TypeError: g.browser is undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 4375 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c, line 300: Script terminated by timeout at:
+Am@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:300:396
+UF@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:488:706
+aa.Km@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:491:210
+aa.Jm/k/<@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:491:121
+Qj@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:261:342
+dk@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:264:350
+k@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:491:107
+c@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:311:169
+yn@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:312:269
+aa.Jm@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:491:144
+c@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:510:678
+nq@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:352:298
+mq.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:355:263
+mq.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:353:207
+fq@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:350:789
+lG/<@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:511:178
+aa.Jk/<@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:462:126
+aa.Jk/c/<@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:420
+
+1703748554300	Marionette	INFO	Stopped listening on port 50210
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
