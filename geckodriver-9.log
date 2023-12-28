@@ -1,0 +1,20 @@
+1703754396564	geckodriver	INFO	Listening on 127.0.0.1:52696
+1703754399623	mozrunner::runner	INFO	Running command: "C:\\Users\\Archimedis Digital\\.cache\\selenium\\firefox\\win64\\121.0\\firefox.exe" "--marionette" "--remo ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ARCHIM~1\\AppData\\Local\\Temp\\rust_mozprofilem4v9XV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703754400004	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703754400122	Marionette	INFO	Listening on port 52708
+WebDriver BiDi listening on ws://127.0.0.1:52697
+Read port: 52708
+1703754400327	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52697/devtools/browser/f23b735e-8c4b-464f-9ddb-4e61bf5d956e
+JavaScript error: https://maps.google.com/maps/api/js?libraries=places&language=en, line 240: TypeError: m is undefined
+1703754430872	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://dashboard.getsauce.com/static/js/2.34914727.chunk.js, line 2: Script terminated by timeout at:
+h/<@https://dashboard.getsauce.com/static/js/2.34914727.chunk.js:2:1365332
+
+1703754832543	Marionette	INFO	Stopped listening on port 52708
+Dynamically enable window occlusion 1

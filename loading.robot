@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 Loading the Page    
-    Open Browser    https://the-internet.herokuapp.com/dynamic_loading    chrome
+    Open Browser    https://the-internet.herokuapp.com/dynamic_loading  
     Click Element    //a[@href="/dynamic_loading/1"]
     Click Button    //button[contains (text(),'Start')]
     Wait Until Element Is Visible    //div[@id="finish"]    10

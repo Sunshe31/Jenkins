@@ -1,60 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20231228 14:26:25.943" rpa="false" schemaversion="4">
-<suite id="s1" name="Get Api Postman" source="c:\Users\Archimedis Digital\Robot Framework\api postman\get_api_postman.robot">
-<test id="s1-t1" name="Get User Details" line="9">
+<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20231228 17:26:13.050" rpa="false" schemaversion="4">
+<suite id="s1" name="Update Api Postman" source="c:\Users\Archimedis Digital\Robot Framework\api postman\update_api_postman.robot">
+<test id="s1-t1" name="Update" line="35">
+<kw name="Open the Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/key_presses?</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231228 17:26:13.380" level="INFO">Opening browser 'firefox' to base url 'https://the-internet.herokuapp.com/key_presses?'.</msg>
+<status status="PASS" starttime="20231228 17:26:13.380" endtime="20231228 17:26:22.469"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231228 17:26:22.469" endtime="20231228 17:26:22.469"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231228 17:26:22.469" endtime="20231228 17:26:22.469"/>
+</kw>
+<status status="PASS" starttime="20231228 17:26:13.368" endtime="20231228 17:26:22.469"/>
+</kw>
+<kw name="Pressing the Keys">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@id="target"]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231228 17:26:22.469" level="INFO">Sending key(s) ('ENTER',) to //input[@id="target"] element.</msg>
+<msg timestamp="20231228 17:26:24.831" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20231228 17:26:24.831" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231228 17:26:22.469" endtime="20231228 17:26:25.851"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@id="target"]</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231228 17:26:25.853" level="INFO">Sending key(s) ('TAB',) to //input[@id="target"] element.</msg>
+<msg timestamp="20231228 17:26:28.163" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20231228 17:26:28.163" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231228 17:26:25.851" endtime="20231228 17:26:29.184"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@id="target"]</arg>
+<arg>ALT</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231228 17:26:29.184" level="INFO">Sending key(s) ('ALT',) to //input[@id="target"] element.</msg>
+<msg timestamp="20231228 17:26:31.494" level="INFO">Pressing special key ALT to element.</msg>
+<msg timestamp="20231228 17:26:31.494" level="INFO">Releasing special key ALT.</msg>
+<status status="PASS" starttime="20231228 17:26:29.184" endtime="20231228 17:26:32.501"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@id="target"]</arg>
+<arg>DELETE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231228 17:26:32.501" level="INFO">Sending key(s) ('DELETE',) to //input[@id="target"] element.</msg>
+<msg timestamp="20231228 17:26:34.795" level="INFO">Pressing special key DELETE to element.</msg>
+<msg timestamp="20231228 17:26:34.795" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20231228 17:26:32.501" endtime="20231228 17:26:35.800"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@id="target"]</arg>
+<arg>SHIFT</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231228 17:26:35.800" level="INFO">Sending key(s) ('SHIFT',) to //input[@id="target"] element.</msg>
+<msg timestamp="20231228 17:26:38.093" level="INFO">Pressing special key SHIFT to element.</msg>
+<msg timestamp="20231228 17:26:38.093" level="INFO">Releasing special key SHIFT.</msg>
+<status status="PASS" starttime="20231228 17:26:35.800" endtime="20231228 17:26:39.114"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@id="target"]</arg>
+<arg>CTRL</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231228 17:26:39.114" level="INFO">Sending key(s) ('CTRL',) to //input[@id="target"] element.</msg>
+<msg timestamp="20231228 17:26:41.408" level="INFO">Pressing special key CONTROL to element.</msg>
+<msg timestamp="20231228 17:26:41.408" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20231228 17:26:39.114" endtime="20231228 17:26:42.414"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@id="target"]</arg>
+<arg>SPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231228 17:26:42.414" level="INFO">Sending key(s) ('SPACE',) to //input[@id="target"] element.</msg>
+<msg timestamp="20231228 17:26:44.706" level="INFO">Pressing special key SPACE to element.</msg>
+<msg timestamp="20231228 17:26:44.706" level="INFO">Releasing special key SPACE.</msg>
+<status status="PASS" starttime="20231228 17:26:42.414" endtime="20231228 17:26:45.725"/>
+</kw>
+<status status="PASS" starttime="20231228 17:26:22.469" endtime="20231228 17:26:45.725"/>
+</kw>
+<kw name="API request">
 <kw name="Create Session" library="RequestsLibrary">
-<arg>apiSession</arg>
+<arg>Update</arg>
 <arg>${baseUrl}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20231228 14:26:26.149" level="INFO">Creating Session using : alias=apiSession, url=https://simple-books-api.glitch.me, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20231228 14:26:26.149" endtime="20231228 14:26:26.149"/>
+<msg timestamp="20231228 17:26:45.725" level="INFO">Creating Session using : alias=Update, url=https://the-internet.herokuapp.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231228 17:26:45.725" endtime="20231228 17:26:45.725"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json</arg>
+<var>${create}</var>
+<arg>Content-type=application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20231228 14:26:26.149" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20231228 14:26:26.149" endtime="20231228 14:26:26.149"/>
+<msg timestamp="20231228 17:26:45.725" level="INFO">${create} = {'Content-type': 'application/json'}</msg>
+<status status="PASS" starttime="20231228 17:26:45.725" endtime="20231228 17:26:45.725"/>
+</kw>
+<kw name="Update Session" library="RequestsLibrary">
+<var>${update}</var>
+<arg>Update</arg>
+<arg>json=${header}</arg>
+<doc>Updates HTTP Session Headers and Cookies.</doc>
+<msg timestamp="20231228 17:26:45.725" level="INFO">${update} = None</msg>
+<status status="PASS" starttime="20231228 17:26:45.725" endtime="20231228 17:26:45.725"/>
 </kw>
 <kw name="GET On Session" library="RequestsLibrary">
 <var>${response}</var>
-<arg>apiSession</arg>
-<arg>/status</arg>
-<arg>headers=${headers}</arg>
+<arg>Update</arg>
+<arg>/key_presses?</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20231228 14:26:27.174" level="INFO">GET Request : url=https://simple-books-api.glitch.me/status 
- path_url=/status 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+<msg timestamp="20231228 17:26:46.729" level="INFO">GET Request : url=https://the-internet.herokuapp.com/key_presses 
+ path_url=/key_presses 
+ headers={} 
  body=None 
  </msg>
-<msg timestamp="20231228 14:26:27.175" level="INFO">GET Response : url=https://simple-books-api.glitch.me/status 
+<msg timestamp="20231228 17:26:46.729" level="INFO">GET Response : url=https://the-internet.herokuapp.com/key_presses 
  status=200, reason=OK 
- headers={'Date': 'Thu, 28 Dec 2023 08:56:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'Connection': 'keep-alive', 'x-powered-by': 'Express', 'etag': 'W/"f-v/Y1JusChTxrQUzPtNAKycooOTA"'} 
- body={"status":"OK"} 
+ headers={'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1703764606&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=RAOLwi7nnH%2BZrgCH6IX6gp%2BjDwaHslAz3tdxpPVJeNE%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1703764606&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=RAOLwi7nnH%2BZrgCH6IX6gp%2BjDwaHslAz3tdxpPVJeNE%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'Content-Type': 'text/html;charset=utf-8', 'Content-Length': '3984', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'Server': 'WEBrick/1.6.0 (Ruby/2.7.2/2020-10-01)', 'Date': 'Thu, 28 Dec 2023 11:56:46 GMT', 'Set-Cookie': 'rack.session=BAh7CUkiD3Nlc3Npb25faWQGOgZFVEkiRTljNmQ5YWZiZTUwZTNhYzVmMWRm%0AMTkxZjZhMjZiMmE2OTJkMTI0ZGI1YzgzN2JjMzAxY2RiYzQ3ODBjZDM5ZTQG%0AOwBGSSIJY3NyZgY7AEZJIiU5ZjMyMzgwNDkyODhjMzRiZmYwOTJmYjFlZWQ2%0AYzczYwY7AEZJIg10cmFja2luZwY7AEZ7B0kiFEhUVFBfVVNFUl9BR0VOVAY7%0AAFRJIi0yYWRiYjI5N2VkNjg1ZDMxMjU2N2RjYjM1ODhjZjhkNDlmYzJhZjdl%0ABjsARkkiGUhUVFBfQUNDRVBUX0xBTkdVQUdFBjsAVEkiLWRhMzlhM2VlNWU2%0AYjRiMGQzMjU1YmZlZjk1NjAxODkwYWZkODA3MDkGOwBGSSIKZmxhc2gGOwBG%0AewA%3D%0A--6fba4b8cdd0c46b6696e91d4485579a475027cbc; path=/; HttpOnly', 'Via': '1.1 vegur'} 
+ body=&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8]&gt;         &lt;html class="no-js lt-ie9" lang="en" &gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class="no-js" lang="en" &gt; &lt;!--&lt;![endif]--&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="/js/vendor/298279967.js"&gt;&lt;/script&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width" /&gt;
+    &lt;title&gt;The Internet&lt;/title&gt;
+    &lt;link href="/css/app.css" rel="stylesheet"&gt;
+    &lt;link href="/css/font-awesome.css" rel="stylesheet"&gt;
+    &lt;script src="/js/vendor/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+    &lt;script src="/js/vendor/jquery-ui-1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
+    &lt;script src="/js/foundation/foundation.js"&gt;&lt;/script&gt;
+    &lt;script src="/js/foundation/foundation.alerts.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      $(document).foundation();
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="row"&gt;
+      &lt;div id="flash-messages" class="large-12 columns"&gt;
+      
+        
+      
+        
+      
+        
+      
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;a href="https://github.com/tourdedave/the-internet"&gt;&lt;img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme_right_green_007200.png" alt="Fork me on GitHub"&gt;&lt;/a&gt;
+      &lt;div id="content" class="large-12 columns"&gt;
+        &lt;script&gt;
+  $(document).keydown(function(event){
+    output = keyboardMap[ event.which ];
+    log('You entered: '+ output);
+  })
+  function log(msg) {
+    var result = document.getElementById('result');
+    result.innerHTML = msg;
+  }
+  // names of known key codes (0-255)
+  var keyboardMap = ["","","","CANCEL","","","HELP","","BACK_SPACE","TAB","","","CLEAR","ENTER","RETURN","","SHIFT","CONTROL","ALT","PAUSE","CAPS_LOCK","KANA","EISU","JUNJA","FINAL","HANJA","","ESCAPE","CONVERT","NONCONVERT","ACCEPT","MODECHANGE","SPACE","PAGE_UP","PAGE_DOWN","END","HOME","LEFT","UP","RIGHT","DOWN","SELECT","PRINT","EXECUTE","PRINTSCREEN","INSERT","DELETE","","0","1","2","3","4","5","6","7","8","9","COLON","SEMICOLON","LESS_THAN","EQUALS","GREATER_THAN","QUESTION_MARK","AT","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","WIN","","CONTEXT_MENU","","SLEEP","NUMPAD0","NUMPAD1","NUMPAD2","NUMPAD3","NUMPAD4","NUMPAD5","NUMPAD6","NUMPAD7","NUMPAD8","NUMPAD9","MULTIPLY","ADD","SEPARATOR","SUBTRACT","DECIMAL","DIVIDE","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12","F13","F14","F15","F16","F17","F18","F19","F20","F21","F22","F23","F24","","","","","","","","","NUM_LOCK","SCROLL_LOCK","WIN_OEM_FJ_JISHO","WIN_OEM_FJ_MASSHOU","WIN_OEM_FJ_TOUROKU","WIN_OEM_FJ_LOYA","WIN_OEM_FJ_ROYA","","","","","","","","","","CIRCUMFLEX","EXCLAMATION","DOUBLE_QUOTE","HASH","DOLLAR","PERCENT","AMPERSAND","UNDERSCORE","OPEN_PAREN","CLOSE_PAREN","ASTERISK","PLUS","PIPE","HYPHEN_MINUS","OPEN_CURLY_BRACKET","CLOSE_CURLY_BRACKET","TILDE","","","","","VOLUME_MUTE","VOLUME_DOWN","VOLUME_UP","","","","","COMMA","","PERIOD","SLASH","BACK_QUOTE","","","","","","","","","","","","","","","","","","","","","","","","","","","OPEN_BRACKET","BACK_SLASH","CLOSE_BRACKET","QUOTE","","META","ALTGR","","WIN_ICO_HELP","WIN_ICO_00","","WIN_ICO_CLEAR","","","WIN_OEM_RESET","WIN_OEM_JUMP","WIN_OEM_PA1","WIN_OEM_PA2","WIN_OEM_PA3","WIN_OEM_WSCTRL","WIN_OEM_CUSEL","WIN_OEM_ATTN","WIN_OEM_FINISH","WIN_OEM_COPY","WIN_OEM_AUTO","WIN_OEM_ENLW","WIN_OEM_BACKTAB","ATTN","CRSEL","EXSEL","EREOF","PLAY","ZOOM","","PA1","WIN_OEM_CLEAR",""];
+&lt;/script&gt;
+
+&lt;div class='example'&gt;
+  &lt;h3&gt;Key Presses&lt;/h3&gt;
+  &lt;p&gt;Key presses are often used to interact with a website (e.g., tab order, enter, escape, etc.). Press a key and see what you inputted.&lt;/p&gt;
+  &lt;form&gt;&lt;input id='target' type='text'&gt;&lt;/form&gt;
+  &lt;p id='result' style='color:green'&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id='page-footer' class="row"&gt;
+      &lt;div class="large-4 large-centered columns"&gt;
+        &lt;hr&gt;
+        &lt;div style="text-align: center;"&gt;Powered by &lt;a target="_blank" href="http://elementalselenium.com/"&gt;Elemental Selenium&lt;/a&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ 
  </msg>
-<msg timestamp="20231228 14:26:27.175" level="INFO">C:\Users\Archimedis Digital\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'simple-books-api.glitch.me'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg timestamp="20231228 17:26:46.729" level="INFO">C:\Users\Archimedis Digital\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'the-internet.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg timestamp="20231228 14:26:27.175" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231228 14:26:26.149" endtime="20231228 14:26:27.175"/>
+<msg timestamp="20231228 17:26:46.729" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231228 17:26:45.725" endtime="20231228 17:26:46.729"/>
 </kw>
 <kw name="Should Be Equal As Numbers" library="BuiltIn">
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20231228 14:26:27.175" level="INFO">Argument types are:
+<msg timestamp="20231228 17:26:46.729" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20231228 14:26:27.175" endtime="20231228 14:26:27.175"/>
+<status status="PASS" starttime="20231228 17:26:46.729" endtime="20231228 17:26:46.729"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${response.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231228 14:26:27.175" level="INFO">{"status":"OK"}</msg>
-<status status="PASS" starttime="20231228 14:26:27.175" endtime="20231228 14:26:27.175"/>
+<msg timestamp="20231228 17:26:46.729" level="INFO">&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8]&gt;         &lt;html class="no-js lt-ie9" lang="en" &gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class="no-js" lang="en" &gt; &lt;!--&lt;![endif]--&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="/js/vendor/298279967.js"&gt;&lt;/script&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width" /&gt;
+    &lt;title&gt;The Internet&lt;/title&gt;
+    &lt;link href="/css/app.css" rel="stylesheet"&gt;
+    &lt;link href="/css/font-awesome.css" rel="stylesheet"&gt;
+    &lt;script src="/js/vendor/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+    &lt;script src="/js/vendor/jquery-ui-1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
+    &lt;script src="/js/foundation/foundation.js"&gt;&lt;/script&gt;
+    &lt;script src="/js/foundation/foundation.alerts.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      $(document).foundation();
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="row"&gt;
+      &lt;div id="flash-messages" class="large-12 columns"&gt;
+      
+        
+      
+        
+      
+        
+      
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;a href="https://github.com/tourdedave/the-internet"&gt;&lt;img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme_right_green_007200.png" alt="Fork me on GitHub"&gt;&lt;/a&gt;
+      &lt;div id="content" class="large-12 columns"&gt;
+        &lt;script&gt;
+  $(document).keydown(function(event){
+    output = keyboardMap[ event.which ];
+    log('You entered: '+ output);
+  })
+  function log(msg) {
+    var result = document.getElementById('result');
+    result.innerHTML = msg;
+  }
+  // names of known key codes (0-255)
+  var keyboardMap = ["","","","CANCEL","","","HELP","","BACK_SPACE","TAB","","","CLEAR","ENTER","RETURN","","SHIFT","CONTROL","ALT","PAUSE","CAPS_LOCK","KANA","EISU","JUNJA","FINAL","HANJA","","ESCAPE","CONVERT","NONCONVERT","ACCEPT","MODECHANGE","SPACE","PAGE_UP","PAGE_DOWN","END","HOME","LEFT","UP","RIGHT","DOWN","SELECT","PRINT","EXECUTE","PRINTSCREEN","INSERT","DELETE","","0","1","2","3","4","5","6","7","8","9","COLON","SEMICOLON","LESS_THAN","EQUALS","GREATER_THAN","QUESTION_MARK","AT","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","WIN","","CONTEXT_MENU","","SLEEP","NUMPAD0","NUMPAD1","NUMPAD2","NUMPAD3","NUMPAD4","NUMPAD5","NUMPAD6","NUMPAD7","NUMPAD8","NUMPAD9","MULTIPLY","ADD","SEPARATOR","SUBTRACT","DECIMAL","DIVIDE","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12","F13","F14","F15","F16","F17","F18","F19","F20","F21","F22","F23","F24","","","","","","","","","NUM_LOCK","SCROLL_LOCK","WIN_OEM_FJ_JISHO","WIN_OEM_FJ_MASSHOU","WIN_OEM_FJ_TOUROKU","WIN_OEM_FJ_LOYA","WIN_OEM_FJ_ROYA","","","","","","","","","","CIRCUMFLEX","EXCLAMATION","DOUBLE_QUOTE","HASH","DOLLAR","PERCENT","AMPERSAND","UNDERSCORE","OPEN_PAREN","CLOSE_PAREN","ASTERISK","PLUS","PIPE","HYPHEN_MINUS","OPEN_CURLY_BRACKET","CLOSE_CURLY_BRACKET","TILDE","","","","","VOLUME_MUTE","VOLUME_DOWN","VOLUME_UP","","","","","COMMA","","PERIOD","SLASH","BACK_QUOTE","","","","","","","","","","","","","","","","","","","","","","","","","","","OPEN_BRACKET","BACK_SLASH","CLOSE_BRACKET","QUOTE","","META","ALTGR","","WIN_ICO_HELP","WIN_ICO_00","","WIN_ICO_CLEAR","","","WIN_OEM_RESET","WIN_OEM_JUMP","WIN_OEM_PA1","WIN_OEM_PA2","WIN_OEM_PA3","WIN_OEM_WSCTRL","WIN_OEM_CUSEL","WIN_OEM_ATTN","WIN_OEM_FINISH","WIN_OEM_COPY","WIN_OEM_AUTO","WIN_OEM_ENLW","WIN_OEM_BACKTAB","ATTN","CRSEL","EXSEL","EREOF","PLAY","ZOOM","","PA1","WIN_OEM_CLEAR",""];
+&lt;/script&gt;
+
+&lt;div class='example'&gt;
+  &lt;h3&gt;Key Presses&lt;/h3&gt;
+  &lt;p&gt;Key presses are often used to interact with a website (e.g., tab order, enter, escape, etc.). Press a key and see what you inputted.&lt;/p&gt;
+  &lt;form&gt;&lt;input id='target' type='text'&gt;&lt;/form&gt;
+  &lt;p id='result' style='color:green'&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id='page-footer' class="row"&gt;
+      &lt;div class="large-4 large-centered columns"&gt;
+        &lt;hr&gt;
+        &lt;div style="text-align: center;"&gt;Powered by &lt;a target="_blank" href="http://elementalselenium.com/"&gt;Elemental Selenium&lt;/a&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</msg>
+<status status="PASS" starttime="20231228 17:26:46.729" endtime="20231228 17:26:46.729"/>
 </kw>
-<status status="PASS" starttime="20231228 14:26:26.149" endtime="20231228 14:26:27.175"/>
+<status status="PASS" starttime="20231228 17:26:45.725" endtime="20231228 17:26:46.729"/>
+</kw>
+<status status="PASS" starttime="20231228 17:26:13.368" endtime="20231228 17:26:46.729"/>
 </test>
-<status status="PASS" starttime="20231228 14:26:25.950" endtime="20231228 14:26:27.175"/>
+<status status="PASS" starttime="20231228 17:26:13.056" endtime="20231228 17:26:46.747"/>
 </suite>
 <statistics>
 <total>
@@ -63,7 +287,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Get Api Postman">Get Api Postman</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Update Api Postman">Update Api Postman</stat>
 </suite>
 </statistics>
 <errors>

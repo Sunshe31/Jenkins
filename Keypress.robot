@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 Keys Press
-    Open Browser    https://the-internet.herokuapp.com/key_presses?    chrome
+    Open Browser    https://the-internet.herokuapp.com/key_presses?
     Maximize Browser Window
     Press Keys    //input[@id="target"]    ENTER
     Press Keys    //input[@id="target"]    TAB

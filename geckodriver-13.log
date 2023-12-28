@@ -1,0 +1,17 @@
+1703755490213	geckodriver	INFO	Listening on 127.0.0.1:53822
+1703755493276	mozrunner::runner	INFO	Running command: "C:\\Users\\Archimedis Digital\\.cache\\selenium\\firefox\\win64\\121.0\\firefox.exe" "--marionette" "--remo ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ARCHIM~1\\AppData\\Local\\Temp\\rust_mozprofilembJ3Dm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703755493660	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703755493765	Marionette	INFO	Listening on port 53830
+WebDriver BiDi listening on ws://127.0.0.1:53823
+Read port: 53830
+1703755493958	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:53823/devtools/browser/8253ff7b-362d-45f2-919a-b4b913edacb0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://the-internet.herokuapp.com."
+1703755524621	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+1703755681607	Marionette	INFO	Stopped listening on port 53830
+Dynamically enable window occlusion 1
