@@ -19,10 +19,10 @@ Global SQA CheatSheets
     END    
     Mouse Over    (//a[@class="no_border"])[1]    
     Mouse Over    (//a[@class="no_border"])[2]
+    Close Browser
 
 API request    
     Create Session    mysession    ${baseUrl}
-    ${ddict}    Create Dictionary    Content-Type=application/json
     ${post}    POST On Session    mysession    /cheatsheets    json=${HEADERS}     
     Should Be Equal As Numbers    ${post.status_code}    200
     Log    ${post.text}   
@@ -33,4 +33,3 @@ Global SQA
     
     Global SQA CheatSheets
     API request
-     

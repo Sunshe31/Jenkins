@@ -4,7 +4,7 @@ Library    Collections
 
 *** Keywords ***
 Phptravel
-    Open Browser    https://phptravels.org/register.php
+    Open Browser    https://phptravels.org/register.php    chrome
     Maximize Browser Window
     Input Text    //input[@id="inputFirstName"]    aishu
     Input Text    //input[@id="inputLastName"]    a
