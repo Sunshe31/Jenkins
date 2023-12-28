@@ -1,0 +1,23 @@
+1703765314483	geckodriver	INFO	Listening on 127.0.0.1:62856
+1703765317512	mozrunner::runner	INFO	Running command: "C:\\Users\\Archimedis Digital\\.cache\\selenium\\firefox\\win64\\121.0\\firefox.exe" "--marionette" "--remo ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ARCHIM~1\\AppData\\Local\\Temp\\rust_mozprofileBL0frk"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703765317899	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703765318014	Marionette	INFO	Listening on port 62866
+WebDriver BiDi listening on ws://127.0.0.1:62857
+Read port: 62866
+1703765318236	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62857/devtools/browser/3f00dfe5-3b75-4432-b1ed-152eeb7797e4
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.2, line 23: TypeError: $.browser is undefined
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 89: TagError: adsbygoogle.push() error: Only one 'enable_page_level_ads' allowed per page.
+JavaScript error: https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.smoothscroll.js?ver=6.4.2, line 430: TypeError: $.browser is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 2249 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c, line 463: Script terminated by timeout at:
+aa.wh@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:463:42
+get@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:119
+stop@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:87
+aa.Jk/c/<@https://www.googletagmanager.com/gtag/js?id=G-7X7CX2NTS7&l=dataLayer&cx=c:461:412
+
+1703765345336	Marionette	INFO	Stopped listening on port 62866
+Dynamically enable window occlusion 1

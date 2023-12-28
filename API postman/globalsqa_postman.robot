@@ -9,13 +9,8 @@ Library    RequestsLibrary
 ${baseUrl}    https://www.globalsqa.com/
 ${HEADERS}    Content-Type=application/json
 
-
-*** Test Cases ***
-Global SQA
-    Create Session    mysession    ${baseUrl}
-    ${ddict}    Create Dictionary    Content-Type=application/json
-    ${post}    POST On Session    mysession    /cheatsheets    json=${HEADERS}     
-    
+*** Keywords ***
+Global SQA CheatSheets 
     Open Browser    https://www.globalsqa.com/cheatsheets/
     # Maximize Browser Window
     FOR    ${element}    IN    @{a}
@@ -25,5 +20,17 @@ Global SQA
     Mouse Over    (//a[@class="no_border"])[1]    
     Mouse Over    (//a[@class="no_border"])[2]
 
+API request    
+    Create Session    mysession    ${baseUrl}
+    ${ddict}    Create Dictionary    Content-Type=application/json
+    ${post}    POST On Session    mysession    /cheatsheets    json=${HEADERS}     
     Should Be Equal As Numbers    ${post.status_code}    200
-    Log    ${post.text}    
+    Log    ${post.text}   
+
+
+*** Test Cases ***
+Global SQA
+    
+    Global SQA CheatSheets
+    API request
+     
