@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20231228 18:11:17.423" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20231228 18:34:07.887" rpa="false" schemaversion="4">
 <suite id="s1" name="Globalsqa Postman" source="c:\Users\Archimedis Digital\Robot Framework\api postman\globalsqa_postman.robot">
 <test id="s1-t1" name="Global SQA" line="32">
 <kw name="Global SQA CheatSheets">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://www.globalsqa.com/cheatsheets/</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231228 18:11:17.817" level="INFO">Opening browser 'firefox' to base url 'https://www.globalsqa.com/cheatsheets/'.</msg>
-<status status="PASS" starttime="20231228 18:11:17.816" endtime="20231228 18:11:26.212"/>
+<msg timestamp="20231228 18:34:08.272" level="INFO">Opening browser 'firefox' to base url 'https://www.globalsqa.com/cheatsheets/'.</msg>
+<status status="PASS" starttime="20231228 18:34:08.272" endtime="20231228 18:34:17.039"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231228 18:34:17.040" endtime="20231228 18:34:17.053"/>
 </kw>
 <for flavor="IN">
 <var>${element}</var>
@@ -17,58 +21,58 @@
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20231228 18:11:26.213" endtime="20231228 18:11:26.274"/>
+<status status="PASS" starttime="20231228 18:34:17.055" endtime="20231228 18:34:17.128"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231228 18:11:26.275" level="INFO">Clicking element '(//a[contains (text(), 'Home')])[1]'.</msg>
-<status status="PASS" starttime="20231228 18:11:26.275" endtime="20231228 18:11:27.443"/>
+<msg timestamp="20231228 18:34:17.130" level="INFO">Clicking element '(//a[contains (text(), 'Home')])[1]'.</msg>
+<status status="PASS" starttime="20231228 18:34:17.129" endtime="20231228 18:34:18.262"/>
 </kw>
-<status status="PASS" starttime="20231228 18:11:26.213" endtime="20231228 18:11:27.443"/>
+<status status="PASS" starttime="20231228 18:34:17.054" endtime="20231228 18:34:18.262"/>
 </iter>
 <iter>
 <var name="${element}">(//a[contains (text(), 'CheatSheets')])[1]</var>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20231228 18:11:27.444" endtime="20231228 18:11:27.468"/>
+<status status="PASS" starttime="20231228 18:34:18.263" endtime="20231228 18:34:18.290"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231228 18:11:27.471" level="INFO">Clicking element '(//a[contains (text(), 'CheatSheets')])[1]'.</msg>
-<status status="PASS" starttime="20231228 18:11:27.469" endtime="20231228 18:11:30.268"/>
+<msg timestamp="20231228 18:34:18.296" level="INFO">Clicking element '(//a[contains (text(), 'CheatSheets')])[1]'.</msg>
+<status status="PASS" starttime="20231228 18:34:18.291" endtime="20231228 18:34:19.767"/>
 </kw>
-<status status="PASS" starttime="20231228 18:11:27.443" endtime="20231228 18:11:30.268"/>
+<status status="PASS" starttime="20231228 18:34:18.263" endtime="20231228 18:34:19.767"/>
 </iter>
-<status status="PASS" starttime="20231228 18:11:26.212" endtime="20231228 18:11:30.269"/>
+<status status="PASS" starttime="20231228 18:34:17.054" endtime="20231228 18:34:19.768"/>
 </for>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <arg>(//a[@class="no_border"])[1]</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20231228 18:11:30.273" level="INFO">Simulating Mouse Over on element '(//a[@class="no_border"])[1]'.</msg>
-<status status="PASS" starttime="20231228 18:11:30.270" endtime="20231228 18:11:30.573"/>
+<msg timestamp="20231228 18:34:19.770" level="INFO">Simulating Mouse Over on element '(//a[@class="no_border"])[1]'.</msg>
+<status status="PASS" starttime="20231228 18:34:19.769" endtime="20231228 18:34:20.077"/>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <arg>(//a[@class="no_border"])[2]</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20231228 18:11:30.574" level="INFO">Simulating Mouse Over on element '(//a[@class="no_border"])[2]'.</msg>
-<status status="PASS" starttime="20231228 18:11:30.573" endtime="20231228 18:11:30.864"/>
+<msg timestamp="20231228 18:34:20.079" level="INFO">Simulating Mouse Over on element '(//a[@class="no_border"])[2]'.</msg>
+<status status="PASS" starttime="20231228 18:34:20.078" endtime="20231228 18:34:20.405"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231228 18:11:30.864" endtime="20231228 18:11:34.096"/>
+<status status="PASS" starttime="20231228 18:34:20.406" endtime="20231228 18:34:23.632"/>
 </kw>
-<status status="PASS" starttime="20231228 18:11:17.815" endtime="20231228 18:11:34.097"/>
+<status status="PASS" starttime="20231228 18:34:08.272" endtime="20231228 18:34:23.632"/>
 </kw>
 <kw name="API request">
 <kw name="Create Session" library="RequestsLibrary">
 <arg>mysession</arg>
 <arg>${baseUrl}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20231228 18:11:34.101" level="INFO">Creating Session using : alias=mysession, url=https://www.globalsqa.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20231228 18:11:34.100" endtime="20231228 18:11:34.102"/>
+<msg timestamp="20231228 18:34:23.632" level="INFO">Creating Session using : alias=mysession, url=https://www.globalsqa.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231228 18:34:23.632" endtime="20231228 18:34:23.632"/>
 </kw>
 <kw name="POST On Session" library="RequestsLibrary">
 <var>${post}</var>
@@ -76,14 +80,14 @@
 <arg>/cheatsheets</arg>
 <arg>json=${HEADERS}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20231228 18:11:36.837" level="INFO">POST Request : url=https://www.globalsqa.com/cheatsheets 
+<msg timestamp="20231228 18:34:26.409" level="INFO">POST Request : url=https://www.globalsqa.com/cheatsheets 
  path_url=/cheatsheets 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '31', 'Content-Type': 'application/json'} 
  body=b'"Content-Type=application/json"' 
  </msg>
-<msg timestamp="20231228 18:11:36.837" level="INFO">POST Response : url=https://www.globalsqa.com/cheatsheets 
+<msg timestamp="20231228 18:34:26.409" level="INFO">POST Response : url=https://www.globalsqa.com/cheatsheets 
  status=200, reason=OK 
- headers={'Date': 'Thu, 28 Dec 2023 12:41:37 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'link': '&lt;https://www.globalsqa.com/wp-json/&gt;; rel="https://api.w.org/", &lt;https://www.globalsqa.com/wp-json/wp/v2/pages/6881&gt;; rel="alternate"; type="application/json", &lt;https://wp.me/P7B4Kk-1MZ&gt;; rel=shortlink', 'x-litespeed-cache-control': 'no-cache', 'Cache-Control': 'public, max-age=3600', 'expires': 'Thu, 28 Dec 2023 13:41:36 GMT', 'vary': 'Accept-Encoding', 'referrer-policy': 'no-referrer-when-downgrade', 'x-turbo-charged-by': 'LiteSpeed', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=lPNrO%2FdzhlLb3DglnZHO9zvIrerj4soypaCru8PVPWcSeRCWNqaVGSIBBHaRsxqCXlwih8XtruNHCNWq0RY3V3hEszt5pkzh6T8RpzETNzIHvMNWt1Ngv8LHHzwmQ0cD1AsFAw%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '83c9e0d66b420694-MAA', 'Content-Encoding': 'gzip'} 
+ headers={'Date': 'Thu, 28 Dec 2023 13:04:26 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'link': '&lt;https://www.globalsqa.com/wp-json/&gt;; rel="https://api.w.org/", &lt;https://www.globalsqa.com/wp-json/wp/v2/pages/6881&gt;; rel="alternate"; type="application/json", &lt;https://wp.me/P7B4Kk-1MZ&gt;; rel=shortlink', 'x-litespeed-cache-control': 'no-cache', 'Cache-Control': 'public, max-age=3600', 'expires': 'Thu, 28 Dec 2023 14:04:26 GMT', 'vary': 'Accept-Encoding', 'referrer-policy': 'no-referrer-when-downgrade', 'x-turbo-charged-by': 'LiteSpeed', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=bpz6P3McVIHAQoVbnFcN75LTsTmDNYq88z6uOURpgKoEVzfzA%2BpcV7IBFT7DZfUtnRu9ybgQrPArjgd%2BlR85lkSXRSDxB3gHdL3UovWdZ23sx5N6wG28TolwXRH3uBeDgjd%2Bmg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '83ca02465ddd178f-MAA', 'Content-Encoding': 'gzip'} 
  body=&lt;!DOCTYPE html&gt;
 &lt;!--[if IE 7]&gt;
 &lt;html class="ie ie7" lang="en-US"&gt;
@@ -177,24 +181,24 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 &lt;style id='wp-block-library-inline-css' type='text/css'&gt;
 .has-text-align-justify{text-... (set the log level to DEBUG or TRACE to see the full content) 
  </msg>
-<msg timestamp="20231228 18:11:36.837" level="INFO">C:\Users\Archimedis Digital\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.globalsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg timestamp="20231228 18:34:26.409" level="INFO">C:\Users\Archimedis Digital\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.globalsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg timestamp="20231228 18:11:36.837" level="INFO">${post} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231228 18:11:34.103" endtime="20231228 18:11:36.837"/>
+<msg timestamp="20231228 18:34:26.409" level="INFO">${post} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231228 18:34:23.632" endtime="20231228 18:34:26.409"/>
 </kw>
 <kw name="Should Be Equal As Numbers" library="BuiltIn">
 <arg>${post.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20231228 18:11:36.847" level="INFO">Argument types are:
+<msg timestamp="20231228 18:34:26.409" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20231228 18:11:36.837" endtime="20231228 18:11:36.847"/>
+<status status="PASS" starttime="20231228 18:34:26.409" endtime="20231228 18:34:26.409"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${post.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231228 18:11:36.849" level="INFO">&lt;!DOCTYPE html&gt;
+<msg timestamp="20231228 18:34:26.409" level="INFO">&lt;!DOCTYPE html&gt;
 &lt;!--[if IE 7]&gt;
 &lt;html class="ie ie7" lang="en-US"&gt;
 &lt;![endif]--&gt;
@@ -389,7 +393,7 @@ var JSFooterParams = {"fixed_footer":"0"};
 &lt;script type="text/javascript" src="https://c0.wp.com/c/6.4.2/wp-includes/js/hoverIntent.min.js" id="hoverIntent-js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" id="utils-js-extra"&gt;
 /* &lt;![CDATA[ */
-var userSettings = {"url":"\/","uid":"0","time":"1703767295","secure":"1"};
+var userSettings = {"url":"\/","uid":"0","time":"1703768665","secure":"1"};
 /* ]]&gt; */
 &lt;/script&gt;
 &lt;script type="text/javascript" src="https://c0.wp.com/c/6.4.2/wp-includes/js/utils.min.js" id="utils-js"&gt;&lt;/script&gt;
@@ -593,7 +597,7 @@ body.custom-background { background-image: url("https://www.globalsqa.com/wp-con
 						&lt;a target='_blank' href='https://in.pinterest.com/globalsqa/' class='header_soc_pinterest' title='Pinterest'&gt;pinterest&lt;/a&gt;&lt;a target='_blank' href='https://twitter.com/Global_SQA' class='header_soc_twitter' title='Twitter'&gt;twitter&lt;/a&gt;&lt;a target='_blank' href='https://www.linkedin.com/company/globalsqa' class='header_soc_linkedin' title='LinkedIn'&gt;linkedin&lt;/a&gt;&lt;a target='_blank' href='https://plus.google.com/103761557396023531439/posts' class='header_soc_google' title='Google+'&gt;google&lt;/a&gt;&lt;a target='_blank' href="https://facebook.com/globalsqa" class='header_soc_facebook' title='Facebook'&gt;facebook&lt;/a&gt;						
 							
 							&lt;div class="header_contacts" &gt;
-																	&lt;div class="header_mail"&gt;&lt;a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f0c00011b0e0c1b2f0803000d0e031c1e0e410c0002"&gt;[email&amp;#160;protected]&lt;/a&gt;&lt;/div&gt;
+																	&lt;div class="header_mail"&gt;&lt;a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="365559584257554276515a5954575a4547571855595b"&gt;[email&amp;#160;protected]&lt;/a&gt;&lt;/div&gt;
 									
 																	&lt;div class="header_phone"&gt;+91-9910979218&lt;/div&gt;
 															&lt;/div&gt;
@@ -809,7 +813,7 @@ body.custom-background { background-image: url("https://www.globalsqa.com/wp-con
 			  &lt;div class="four columns"&gt;
 				&lt;h3&gt;Contact Info&lt;/h3&gt;				&lt;div class="icon_phone"&gt;+91-9910979218&lt;/div&gt;
 		
-				&lt;div class="icon_mail"&gt;&amp;#99;&amp;#111;nt&amp;#97;c&amp;#116;&amp;#64;gl&amp;#111;&amp;#98;a&amp;#108;sq&amp;#97;&amp;#46;c&amp;#111;m&lt;/div&gt;
+				&lt;div class="icon_mail"&gt;&amp;#99;o&amp;#110;tact&amp;#64;&amp;#103;lobals&amp;#113;&amp;#97;&amp;#46;&amp;#99;om&lt;/div&gt;
 		
 				&lt;div class="icon_loc"&gt;146, VP Block, Pitampura, New Delhi-110034&lt;/div&gt;
 				
@@ -928,13 +932,13 @@ lazySizes.cfg.nativeLoading={setLoadingAttribute:false,disableListeners:{scroll:
   
 &lt;/body&gt;
 &lt;/html&gt;	</msg>
-<status status="PASS" starttime="20231228 18:11:36.847" endtime="20231228 18:11:36.851"/>
+<status status="PASS" starttime="20231228 18:34:26.409" endtime="20231228 18:34:26.409"/>
 </kw>
-<status status="PASS" starttime="20231228 18:11:34.099" endtime="20231228 18:11:36.851"/>
+<status status="PASS" starttime="20231228 18:34:23.632" endtime="20231228 18:34:26.409"/>
 </kw>
-<status status="PASS" starttime="20231228 18:11:17.814" endtime="20231228 18:11:36.852"/>
+<status status="PASS" starttime="20231228 18:34:08.264" endtime="20231228 18:34:26.409"/>
 </test>
-<status status="PASS" starttime="20231228 18:11:17.430" endtime="20231228 18:11:36.854"/>
+<status status="PASS" starttime="20231228 18:34:07.887" endtime="20231228 18:34:26.423"/>
 </suite>
 <statistics>
 <total>

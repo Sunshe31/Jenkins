@@ -12,7 +12,7 @@ ${HEADERS}    Content-Type=application/json
 *** Keywords ***
 Global SQA CheatSheets 
     Open Browser    https://www.globalsqa.com/cheatsheets/
-    # Maximize Browser Window
+    Maximize Browser Window
     FOR    ${element}    IN    @{a}
         Wait Until Page Contains Element    ${element}
         Click Element    ${element}
