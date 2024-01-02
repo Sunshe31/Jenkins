@@ -8,7 +8,7 @@ Variables    abspath/url.py
 *** Test Cases ***
 JSON for Swag Page
 
-    Open Browser    ${url1}
+    Open Browser    ${url1}    chrome
     Maximize Browser Window
     ${path}    Load Json From File    json.json   
     ${element}    Get Value From Json    ${path}    name

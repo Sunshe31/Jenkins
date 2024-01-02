@@ -6,7 +6,7 @@ Library    RPA.Windows
 
 *** Test Cases ***
 Facebook
-    Open Browser    https://www.facebook.com/index.php/    edge
+    Open Browser    https://www.facebook.com/index.php/    chrome
     Maximize Browser Window
     Input Text    //input[@id="email"]    itsmeaishu3103@gmail.com
     Input Password    //input[@id="pass"]    Asdqwe@123

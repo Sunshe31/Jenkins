@@ -63,7 +63,7 @@ ${click4}    //button[@data-label="Save"]
 
 *** Test Cases ***
 Creation of a Purchase Order from a Material Request of type Purchase 16-01
-    Open Browser    http://115.97.255.108:89/
+    Open Browser    http://115.97.255.108:89/    chrome
     Maximize Browser Window
     Click Element    ${loging}
     Input Text    ${mail}    purchase_user

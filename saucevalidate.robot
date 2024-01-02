@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 Sauce validate
-    Open Browser    https://dashboard.getsauce.com/
+    Open Browser    https://dashboard.getsauce.com/    chrome
     Maximize Browser Window
     Wait Until Page Contains Element    //button[@type="submit"]
     Scroll Element Into View    //button[@type="submit"]

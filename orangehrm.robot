@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${url}    https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-${browser}    firefox
+${browser}    chrome
 ${usernamenew}    //input[@name="username"]  
 ${user}    Admin
 ${password}    //input[@name="password"]
