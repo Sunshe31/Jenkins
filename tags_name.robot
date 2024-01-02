@@ -6,7 +6,7 @@ Force Tags    sanity
 *** Test Cases ***
 tc01
     [Tags]    pet 
-    Open Browser    https://petstore.swagger.io/ 
+    Open Browser    https://petstore.swagger.io/    chrome
     Maximize Browser Window
     Capture Page Screenshot
     Close Browser

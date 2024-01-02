@@ -27,7 +27,7 @@ test
         ${username}    Get From List    ${usernames_and_passwords}    ${i}
         ${password}    Get From List    ${usernames_and_passwords}    ${i+1}
 
-        Open Browser    https://www.saucedemo.com/
+        Open Browser    https://www.saucedemo.com/    chrome
         Input Text    //input[@placeholder="Username"]    ${username}
         Input Password    //input[@placeholder="Password"]    ${password}
     END

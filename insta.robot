@@ -10,7 +10,7 @@ ${photo}    C:/Users/Archimedis Digital/Robot Framework/image.jpg
 
 *** Test Cases ***
 New Test
-    Open browser    https://www.instagram.com/
+    Open browser    https://www.instagram.com/    chrome
     Wait Until Page Contains Element    //input[@name="password"]
     Input Text    //input[@name="username"]    green_ish0123
     Input Password    //input[@name="password"]    Asdqwe@123
