@@ -1,272 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20231228 18:36:56.232" rpa="false" schemaversion="4">
-<suite id="s1" name="Email Api Postman" source="c:\Users\Archimedis Digital\Robot Framework\api postman\email_api_postman.robot">
-<test id="s1-t1" name="Mail" line="10">
-<kw name="Create Session" library="RequestsLibrary">
-<arg>Mail</arg>
-<arg>${BASE_URL}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20231228 18:36:56.472" level="INFO">Creating Session using : alias=Mail, url=https://mail.google.com/mail, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20231228 18:36:56.472" endtime="20231228 18:36:56.474"/>
+<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20240102 18:19:02.275" rpa="false" schemaversion="4">
+<suite id="s1" name="Excel" source="c:\Users\Archimedis Digital\Robot Framework\excel.robot">
+<test id="s1-t1" name="Login with Excel Data" line="12">
+<kw name="Select Worksheet">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>robotframework.xlsx</arg>
+<arg>doc_id</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20240102 18:19:03.464" endtime="20240102 18:19:03.482"/>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${payload}</var>
-<arg>username=${user}</arg>
-<arg>password=${pass}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20231228 18:36:56.476" level="INFO">${payload} = {'username': 'itsmeaishu3103@example.com', 'password': 'Susnjjn#123'}</msg>
-<status status="PASS" starttime="20231228 18:36:56.475" endtime="20231228 18:36:56.476"/>
+<status status="PASS" starttime="20240102 18:19:03.464" endtime="20240102 18:19:03.482"/>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20231228 18:36:56.478" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20231228 18:36:56.477" endtime="20231228 18:36:56.479"/>
+<kw name="Open Browser in sause">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240102 18:19:03.485" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20240102 18:19:03.485" endtime="20240102 18:19:07.023"/>
 </kw>
-<kw name="Post Request" library="RequestsLibrary">
-<var>${response}</var>
-<arg>Mail</arg>
-<arg>/u/0/#inbox</arg>
-<arg>json=${payload}</arg>
-<arg>headers=${headers}</arg>
-<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
-<msg timestamp="20231228 18:36:56.479" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg timestamp="20231228 18:36:56.777" level="INFO">POST Request : url=https://mail.google.com/mail/u/0/#inbox 
- path_url=/mail/u/0/ 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '69'} 
- body=b'{"username": "itsmeaishu3103@example.com", "password": "Susnjjn#123"}' 
- </msg>
-<msg timestamp="20231228 18:36:56.777" level="INFO">POST Response : url=https://mail.google.com/mail/u/0/#inbox 
- status=401, reason=Unauthorized 
- headers={'Content-Type': 'text/html; charset=utf-8', 'Vary': 'Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Date': 'Thu, 28 Dec 2023 13:06:57 GMT', 'Strict-Transport-Security': 'max-age=10886400; includeSubDomains', 'Permissions-Policy': 'ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*', 'Content-Encoding': 'gzip', 'Server': 'ESF', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'clear', 'Transfer-Encoding': 'chunked'} 
- body=
-&lt;script nonce="NfDsQKhYjiIfLM4x_Xa_tg"&gt;&lt;!--
-var gmail_server_error=4440;
-var error_help_topic_id="receiving_error";
-
---&gt;&lt;/script&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=Content-Type content="text/html; charset=UTF-8"&gt;&lt;title&gt;Temporary Error&lt;/title&gt;&lt;link rel="shortcut icon" href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" type="image/x-icon"&gt;&lt;style nonce="mmwsNw2U6LbFeCkS39_rbA"&gt;&lt;!--
-body,td,div,.p,a,font,span {
-font-family: arial,sans-serif;
-}
-
-.tl {
-	background-image: url(//www.gmail.com/mail/help/images/corner_tl_sharp.gif);
-	background-position: top left;
-	background-repeat: no-repeat;
-}
-
-.tr {
-	background-image: url(//www.gmail.com/mail/help/images/corner_tr_sharp.gif);
-	background-position:top right;
-	background-repeat:no-repeat;
-}
-
-.bl {
-	background-image: url(//www.gmail.com/mail/help/images/corner_bl_sharp.gif);
-	background-position: bottom left;
-	background-repeat: no-repeat;
-}
-
-.br {
-	background-image: url(//www.gmail.com/mail/help/images/corner_br_sharp.gif);
-	background-position: bottom right;
-	background-repeat: no-repeat;
-}
-
-.bubble {
-	background-color: #c3d9ff;
-}
-.i { margin-left: 1em; margin-right: 1em; }
-
-.link {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.chat-logo {
-  width: 90px;
-  height: 40px;
-  padding: 4px 16px 4px 4px;
-}
-
-.gmail-logo {
-  width: 143px;
-  height: 59px;
-}
-
-.banner {
-  background-color: #fbe9e7;
-  color: #a52714;
-}
-
-#unsupported_browser .unsupported_browser-warning {
-  color: #b3261e;
-  font-weight: 600;
-  line-height: 18px;
-}
-
-#unsupported_browser {
-  display: none;
-}
-
-#unsupported_browser.unsupported_browser_show {
-  display: block;
-}
-
---&gt;&lt;/style&gt;&lt;/head&gt;&lt;body bgcolor="#ffffff" topmargin=2&gt;&lt;table width=95% border=0 align="center" cellpadding=0 cellspacing=0&gt;&lt;tr valign="top"&gt;&lt;td width="1%"&gt;&lt;a target=_top href="https://mail.google.com/mail/u/0"&gt;&lt;img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_server_1x.png" border=0 class="gmail-logo" alt="Gmail by Google" align="left" vspace="10"&gt;&lt;/a&gt;&lt;/td&gt;&lt;td width="99%" bgcolor="#ffffff" valign="top"&gt;&lt;table width="100%" cellpadding="1"&gt;&lt;tr valign="bottom"&gt;&lt;td&gt;&lt;div align="right"&gt;&amp;nbsp;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td nowrap&gt;&lt;table width="100%" align=center cellpadding=0 cellspacing=0 bgcolor="#C3D9FF" style="margin-bottom:5px;"&gt;&lt;tr&gt;&lt;td class="bubble tl" width="4"&gt;&lt;/td&gt;&lt;td class="bubble" rowspan=2 style="font-family:arial;text-align:left;font-weight:bold;padding:3px 0;"&gt;&lt;b&gt;Temporary Error (401)&lt;/b&gt;&lt;/td&gt;&lt;td class="bubble tr" width="4"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="bubble bl" width="4"&gt;&lt;/td&gt;&lt;td class="bubble br" width="4"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/table&gt;&lt;br&gt;&lt;table width="94%" border=0 align="center" cellpadding=5 cellspacing=0&gt;&lt;tr valign="top"&gt;&lt;td&gt;&lt;p&gt;&lt;font size="-1"&gt;We&amp;#8217;re sorry, but your account is temporarily unavailable.  We apologize for the inconvenience and suggest trying again in a few minutes. You can view the &lt;a href="https://www.google.com/appsstatus"&gt;Google Workspace Status Dashboard&lt;/a&gt; for the current status of the service.&lt;br&gt;&lt;br&gt;If the issue persists, please visit the &lt;a href="http://support.google.com/mail/answer/116775?hl=en&amp;amp;status=401&amp;amp;error=4440"&gt; Help Center &amp;raquo;&lt;/a&gt;&lt;div id="unsupported_browser"&gt;&lt;span class="unsupported_browser-warning"&gt;Gmail may not work well with this browser version.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Please upgrade to a &lt;a href="https://support.google.com/mail/bin/answer.py?ctx=gmail&amp;amp;answer=6557&amp;amp;hl=en&amp;amp;authuser=0"&gt;supported browser&lt;/a&gt;.&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size="-1"&gt;&lt;a target=_top href="https://mail.google.com/mail/u/0"&gt;Try Again&lt;/a&gt; &lt;a target=_top href="https://mail.google.com/mail/u/0?logout"&gt;Sign Out&lt;/a&gt;&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;&lt;table width="94%" border=0 align="center" cellpadding=5 cellspacing=0&gt;&lt;tr valign="top"&gt;&lt;td&gt;&lt;div id="show_tech_info_container"&gt;&lt;font size="-1"&gt;&lt;span id="show_tech_info_link" class="link"&gt;Show Detailed Technical Info&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div id="hide_tech_info_container" style="display:none"&gt;&lt;font size="-1"&gt;&lt;span id="hide_tech_info_link" class="link"&gt;Hide Detailed Technical Info&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div id="tech_info" style="display:none"&gt;&lt;font size="-1"&gt;Numeric Code: &lt;span id="numeric_code"&gt;4440&lt;/span&gt;&lt;br&gt;&lt;pre id="detailed_tech_info"&gt;&lt;/pre&gt;&lt;/font&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;script type="text/javascript" nonce="NfDsQKhYjiIfLM4x_Xa_tg"&gt;
-  function showTechnicalInfo(b) {
-    showElt('show_tech_info_container', !b);
-    showElt('hide_tech_info_container', b);
-    showElt('tech_info', b);
-  }
-  function showElt(id, b) {
-    var elt = document.getElementById(id);
-    elt.style.display = b ? "" : "none";
-  }
-  function addClickHandler(elementId, handler) {
-    var element = document.getElementById(elementId);
-    if (element.addEventListener) {
-      element.addEventListener('click', handler);
-    } else if (element.attachEvent) {
-      element.attachEvent('onClick', handler);
-    }
-  }
-
-  addClickHandler('show_tech_info_link', function() {
-    showTechnicalInfo(1);
-  });
-  addClickHandler('hide_tech_info_link', function() {
-    showTechnicalInfo(0);
-  });
-&lt;/script&gt;&lt;br&gt;&lt;br&gt;&lt;table width="95%" align=center cellpadding=3 cellspacing=0 bgcolor="#C3D9FF" style="margin-bottom:5px;"&gt;&lt;tr&gt;&lt;td class="bubble tl" width="4"&gt;&lt;/td&gt;&lt;td class="bubble" rowspan=2 style="font-family:arial;text-align:center;"&gt;&lt;font size="-1" color="#666666"&gt;&amp;copy;2023 Google - &lt;a target=_top href="https://mail.google.com/mail/u/0"&gt;Home&lt;/a&gt; - &lt;a target=_top href="https://policies.google.com/privacy?hl=en"&gt;Privacy Policy&lt;/a&gt; - &lt;a target=_top href="https://www.gmail.com/mail/help/program_policies.html"&gt;Program Policies&lt;/a&gt; - &lt;a target=_top href="https://www.gmail.com/mail/help/program_policies.html"&gt;Terms of Use&lt;/a&gt;&lt;font size="-1" color="#666666"&gt; - &lt;a target=_top href="https://www.google.com"&gt;Google&amp;nbsp;Home&lt;/a&gt;&lt;/font&gt;&lt;/font&gt;&lt;/td&gt;&lt;td class="bubble tr" width="4"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="bubble bl" width="4"&gt;&lt;/td&gt;&lt;td class="bubble br" width="4"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt; 
- </msg>
-<msg timestamp="20231228 18:36:56.777" level="INFO">C:\Users\Archimedis Digital\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'mail.google.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(</msg>
-<msg timestamp="20231228 18:36:56.777" level="INFO">${response} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20231228 18:36:56.479" endtime="20231228 18:36:56.777"/>
+<status status="PASS" starttime="20240102 18:19:03.485" endtime="20240102 18:19:07.023"/>
 </kw>
-<kw name="Should Be Equal As Numbers" library="BuiltIn">
-<arg>${response.status_code}</arg>
-<arg>401</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20231228 18:36:56.777" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20231228 18:36:56.777" endtime="20231228 18:36:56.777"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240102 18:19:07.026" endtime="20240102 18:19:07.152"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${element}</var>
+<value>1</value>
+<value>5</value>
+<iter>
+<var name="${element}">1</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${username}</var>
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240102 18:19:07.160" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20240102 18:19:07.160" endtime="20240102 18:19:07.160"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${password}</var>
+<arg>${element}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240102 18:19:07.168" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20240102 18:19:07.168" endtime="20240102 18:19:07.168"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>${response.text}</arg>
+<arg>${element}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231228 18:36:56.786" level="INFO">
-&lt;script nonce="NfDsQKhYjiIfLM4x_Xa_tg"&gt;&lt;!--
-var gmail_server_error=4440;
-var error_help_topic_id="receiving_error";
-
---&gt;&lt;/script&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=Content-Type content="text/html; charset=UTF-8"&gt;&lt;title&gt;Temporary Error&lt;/title&gt;&lt;link rel="shortcut icon" href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" type="image/x-icon"&gt;&lt;style nonce="mmwsNw2U6LbFeCkS39_rbA"&gt;&lt;!--
-body,td,div,.p,a,font,span {
-font-family: arial,sans-serif;
-}
-
-.tl {
-	background-image: url(//www.gmail.com/mail/help/images/corner_tl_sharp.gif);
-	background-position: top left;
-	background-repeat: no-repeat;
-}
-
-.tr {
-	background-image: url(//www.gmail.com/mail/help/images/corner_tr_sharp.gif);
-	background-position:top right;
-	background-repeat:no-repeat;
-}
-
-.bl {
-	background-image: url(//www.gmail.com/mail/help/images/corner_bl_sharp.gif);
-	background-position: bottom left;
-	background-repeat: no-repeat;
-}
-
-.br {
-	background-image: url(//www.gmail.com/mail/help/images/corner_br_sharp.gif);
-	background-position: bottom right;
-	background-repeat: no-repeat;
-}
-
-.bubble {
-	background-color: #c3d9ff;
-}
-.i { margin-left: 1em; margin-right: 1em; }
-
-.link {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.chat-logo {
-  width: 90px;
-  height: 40px;
-  padding: 4px 16px 4px 4px;
-}
-
-.gmail-logo {
-  width: 143px;
-  height: 59px;
-}
-
-.banner {
-  background-color: #fbe9e7;
-  color: #a52714;
-}
-
-#unsupported_browser .unsupported_browser-warning {
-  color: #b3261e;
-  font-weight: 600;
-  line-height: 18px;
-}
-
-#unsupported_browser {
-  display: none;
-}
-
-#unsupported_browser.unsupported_browser_show {
-  display: block;
-}
-
---&gt;&lt;/style&gt;&lt;/head&gt;&lt;body bgcolor="#ffffff" topmargin=2&gt;&lt;table width=95% border=0 align="center" cellpadding=0 cellspacing=0&gt;&lt;tr valign="top"&gt;&lt;td width="1%"&gt;&lt;a target=_top href="https://mail.google.com/mail/u/0"&gt;&lt;img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_server_1x.png" border=0 class="gmail-logo" alt="Gmail by Google" align="left" vspace="10"&gt;&lt;/a&gt;&lt;/td&gt;&lt;td width="99%" bgcolor="#ffffff" valign="top"&gt;&lt;table width="100%" cellpadding="1"&gt;&lt;tr valign="bottom"&gt;&lt;td&gt;&lt;div align="right"&gt;&amp;nbsp;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td nowrap&gt;&lt;table width="100%" align=center cellpadding=0 cellspacing=0 bgcolor="#C3D9FF" style="margin-bottom:5px;"&gt;&lt;tr&gt;&lt;td class="bubble tl" width="4"&gt;&lt;/td&gt;&lt;td class="bubble" rowspan=2 style="font-family:arial;text-align:left;font-weight:bold;padding:3px 0;"&gt;&lt;b&gt;Temporary Error (401)&lt;/b&gt;&lt;/td&gt;&lt;td class="bubble tr" width="4"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="bubble bl" width="4"&gt;&lt;/td&gt;&lt;td class="bubble br" width="4"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/table&gt;&lt;br&gt;&lt;table width="94%" border=0 align="center" cellpadding=5 cellspacing=0&gt;&lt;tr valign="top"&gt;&lt;td&gt;&lt;p&gt;&lt;font size="-1"&gt;We&amp;#8217;re sorry, but your account is temporarily unavailable.  We apologize for the inconvenience and suggest trying again in a few minutes. You can view the &lt;a href="https://www.google.com/appsstatus"&gt;Google Workspace Status Dashboard&lt;/a&gt; for the current status of the service.&lt;br&gt;&lt;br&gt;If the issue persists, please visit the &lt;a href="http://support.google.com/mail/answer/116775?hl=en&amp;amp;status=401&amp;amp;error=4440"&gt; Help Center &amp;raquo;&lt;/a&gt;&lt;div id="unsupported_browser"&gt;&lt;span class="unsupported_browser-warning"&gt;Gmail may not work well with this browser version.&lt;/span&gt;&lt;br&gt;&lt;span&gt;Please upgrade to a &lt;a href="https://support.google.com/mail/bin/answer.py?ctx=gmail&amp;amp;answer=6557&amp;amp;hl=en&amp;amp;authuser=0"&gt;supported browser&lt;/a&gt;.&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size="-1"&gt;&lt;a target=_top href="https://mail.google.com/mail/u/0"&gt;Try Again&lt;/a&gt; &lt;a target=_top href="https://mail.google.com/mail/u/0?logout"&gt;Sign Out&lt;/a&gt;&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;&lt;table width="94%" border=0 align="center" cellpadding=5 cellspacing=0&gt;&lt;tr valign="top"&gt;&lt;td&gt;&lt;div id="show_tech_info_container"&gt;&lt;font size="-1"&gt;&lt;span id="show_tech_info_link" class="link"&gt;Show Detailed Technical Info&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div id="hide_tech_info_container" style="display:none"&gt;&lt;font size="-1"&gt;&lt;span id="hide_tech_info_link" class="link"&gt;Hide Detailed Technical Info&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div id="tech_info" style="display:none"&gt;&lt;font size="-1"&gt;Numeric Code: &lt;span id="numeric_code"&gt;4440&lt;/span&gt;&lt;br&gt;&lt;pre id="detailed_tech_info"&gt;&lt;/pre&gt;&lt;/font&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;script type="text/javascript" nonce="NfDsQKhYjiIfLM4x_Xa_tg"&gt;
-  function showTechnicalInfo(b) {
-    showElt('show_tech_info_container', !b);
-    showElt('hide_tech_info_container', b);
-    showElt('tech_info', b);
-  }
-  function showElt(id, b) {
-    var elt = document.getElementById(id);
-    elt.style.display = b ? "" : "none";
-  }
-  function addClickHandler(elementId, handler) {
-    var element = document.getElementById(elementId);
-    if (element.addEventListener) {
-      element.addEventListener('click', handler);
-    } else if (element.attachEvent) {
-      element.attachEvent('onClick', handler);
-    }
-  }
-
-  addClickHandler('show_tech_info_link', function() {
-    showTechnicalInfo(1);
-  });
-  addClickHandler('hide_tech_info_link', function() {
-    showTechnicalInfo(0);
-  });
-&lt;/script&gt;&lt;br&gt;&lt;br&gt;&lt;table width="95%" align=center cellpadding=3 cellspacing=0 bgcolor="#C3D9FF" style="margin-bottom:5px;"&gt;&lt;tr&gt;&lt;td class="bubble tl" width="4"&gt;&lt;/td&gt;&lt;td class="bubble" rowspan=2 style="font-family:arial;text-align:center;"&gt;&lt;font size="-1" color="#666666"&gt;&amp;copy;2023 Google - &lt;a target=_top href="https://mail.google.com/mail/u/0"&gt;Home&lt;/a&gt; - &lt;a target=_top href="https://policies.google.com/privacy?hl=en"&gt;Privacy Policy&lt;/a&gt; - &lt;a target=_top href="https://www.gmail.com/mail/help/program_policies.html"&gt;Program Policies&lt;/a&gt; - &lt;a target=_top href="https://www.gmail.com/mail/help/program_policies.html"&gt;Terms of Use&lt;/a&gt;&lt;font size="-1" color="#666666"&gt; - &lt;a target=_top href="https://www.google.com"&gt;Google&amp;nbsp;Home&lt;/a&gt;&lt;/font&gt;&lt;/font&gt;&lt;/td&gt;&lt;td class="bubble tr" width="4"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="bubble bl" width="4"&gt;&lt;/td&gt;&lt;td class="bubble br" width="4"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</msg>
-<status status="PASS" starttime="20231228 18:36:56.785" endtime="20231228 18:36:56.787"/>
+<msg timestamp="20240102 18:19:07.168" level="INFO">1</msg>
+<status status="PASS" starttime="20240102 18:19:07.168" endtime="20240102 18:19:07.168"/>
 </kw>
-<status status="PASS" starttime="20231228 18:36:56.470" endtime="20231228 18:36:56.788"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:07.176" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20240102 18:19:07.168" endtime="20240102 18:19:07.521"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:07.530" level="INFO">Typing password into text field '//input[@placeholder="Password"]'.</msg>
+<msg timestamp="20240102 18:19:07.610" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240102 18:19:07.768" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240102 18:19:07.521" endtime="20240102 18:19:07.768"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//input[@id="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:07.768" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20240102 18:19:07.768" endtime="20240102 18:19:08.035"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.open('https://www.saucedemo.com/')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240102 18:19:08.035" level="INFO">Executing JavaScript:
+window.open('https://www.saucedemo.com/')
+Without any arguments.</msg>
+<status status="PASS" starttime="20240102 18:19:08.035" endtime="20240102 18:19:08.113"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>New</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240102 18:19:08.113" endtime="20240102 18:19:08.161"/>
+</kw>
+<status status="PASS" starttime="20240102 18:19:07.152" endtime="20240102 18:19:08.161"/>
+</iter>
+<iter>
+<var name="${element}">2</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${username}</var>
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240102 18:19:08.161" level="INFO">${username} = locked_out_user</msg>
+<status status="PASS" starttime="20240102 18:19:08.161" endtime="20240102 18:19:08.161"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${password}</var>
+<arg>${element}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240102 18:19:08.161" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20240102 18:19:08.161" endtime="20240102 18:19:08.161"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240102 18:19:08.169" level="INFO">2</msg>
+<status status="PASS" starttime="20240102 18:19:08.161" endtime="20240102 18:19:08.169"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:08.174" level="INFO">Typing text 'locked_out_user' into text field '//input[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20240102 18:19:08.169" endtime="20240102 18:19:08.613"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:08.616" level="INFO">Typing password into text field '//input[@placeholder="Password"]'.</msg>
+<msg timestamp="20240102 18:19:08.717" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240102 18:19:08.935" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240102 18:19:08.613" endtime="20240102 18:19:08.935"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//input[@id="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:08.942" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20240102 18:19:08.942" endtime="20240102 18:19:09.114"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.open('https://www.saucedemo.com/')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240102 18:19:09.114" level="INFO">Executing JavaScript:
+window.open('https://www.saucedemo.com/')
+Without any arguments.</msg>
+<status status="PASS" starttime="20240102 18:19:09.114" endtime="20240102 18:19:09.165"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>New</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240102 18:19:09.173" endtime="20240102 18:19:09.254"/>
+</kw>
+<status status="PASS" starttime="20240102 18:19:08.161" endtime="20240102 18:19:09.254"/>
+</iter>
+<iter>
+<var name="${element}">3</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${username}</var>
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240102 18:19:09.254" level="INFO">${username} = problem_user</msg>
+<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:09.254"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${password}</var>
+<arg>${element}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240102 18:19:09.254" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:09.254"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240102 18:19:09.254" level="INFO">3</msg>
+<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:09.254"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:09.257" level="INFO">Typing text 'problem_user' into text field '//input[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:09.517"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:09.517" level="INFO">Typing password into text field '//input[@placeholder="Password"]'.</msg>
+<msg timestamp="20240102 18:19:09.602" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240102 18:19:09.774" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240102 18:19:09.517" endtime="20240102 18:19:09.774"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//input[@id="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:09.774" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20240102 18:19:09.774" endtime="20240102 18:19:09.915"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.open('https://www.saucedemo.com/')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240102 18:19:09.919" level="INFO">Executing JavaScript:
+window.open('https://www.saucedemo.com/')
+Without any arguments.</msg>
+<status status="PASS" starttime="20240102 18:19:09.915" endtime="20240102 18:19:09.986"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>New</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240102 18:19:09.986" endtime="20240102 18:19:10.044"/>
+</kw>
+<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:10.044"/>
+</iter>
+<iter>
+<var name="${element}">4</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${username}</var>
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240102 18:19:10.044" level="INFO">${username} = performance_glitch_user</msg>
+<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:10.044"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${password}</var>
+<arg>${element}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240102 18:19:10.044" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:10.044"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240102 18:19:10.044" level="INFO">4</msg>
+<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:10.044"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:10.044" level="INFO">Typing text 'performance_glitch_user' into text field '//input[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:10.437"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:10.441" level="INFO">Typing password into text field '//input[@placeholder="Password"]'.</msg>
+<msg timestamp="20240102 18:19:10.526" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240102 18:19:10.652" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240102 18:19:10.437" endtime="20240102 18:19:10.652"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//input[@id="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240102 18:19:10.659" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20240102 18:19:10.652" endtime="20240102 18:19:15.791"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.open('https://www.saucedemo.com/')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240102 18:19:15.793" level="INFO">Executing JavaScript:
+window.open('https://www.saucedemo.com/')
+Without any arguments.</msg>
+<status status="PASS" starttime="20240102 18:19:15.793" endtime="20240102 18:19:15.862"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>New</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240102 18:19:15.862" endtime="20240102 18:19:15.953"/>
+</kw>
+<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:15.953"/>
+</iter>
+<status status="PASS" starttime="20240102 18:19:07.152" endtime="20240102 18:19:15.953"/>
+</for>
+<status status="PASS" starttime="20240102 18:19:03.464" endtime="20240102 18:19:15.963"/>
 </test>
-<status status="PASS" starttime="20231228 18:36:56.239" endtime="20231228 18:36:56.792"/>
+<status status="PASS" starttime="20240102 18:19:02.300" endtime="20240102 18:19:15.967"/>
 </suite>
 <statistics>
 <total>
@@ -275,10 +286,9 @@ font-family: arial,sans-serif;
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Email Api Postman">Email Api Postman</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Excel">Excel</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231228 18:36:56.479" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
 </errors>
 </robot>

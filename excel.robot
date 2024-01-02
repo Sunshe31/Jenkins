@@ -6,7 +6,7 @@ Library    ExcelLibrary
 Select Worksheet
     Open Excel Document    robotframework.xlsx    doc_id
 Open Browser in sause  
-    Open Browser    https://www.saucedemo.com/    edge
+    Open Browser    https://www.saucedemo.com/    chrome
 
 *** Test Cases ***
 Login with Excel Data
