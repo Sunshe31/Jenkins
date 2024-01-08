@@ -1,292 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20240102 18:19:02.275" rpa="false" schemaversion="4">
-<suite id="s1" name="Excel" source="c:\Users\Archimedis Digital\Robot Framework\excel.robot">
-<test id="s1-t1" name="Login with Excel Data" line="12">
-<kw name="Select Worksheet">
-<kw name="Open Excel Document" library="ExcelLibrary">
-<arg>robotframework.xlsx</arg>
-<arg>doc_id</arg>
-<doc>Opens xlsx document file.</doc>
-<status status="PASS" starttime="20240102 18:19:03.464" endtime="20240102 18:19:03.482"/>
-</kw>
-<status status="PASS" starttime="20240102 18:19:03.464" endtime="20240102 18:19:03.482"/>
-</kw>
-<kw name="Open Browser in sause">
+<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20240105 17:21:05.362" rpa="false" schemaversion="4">
+<suite id="s1" name="Newews" source="c:\Users\Archimedis Digital\Robot Framework\newews.robot">
+<test id="s1-t1" name="Browser should be opened" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.saucedemo.com/</arg>
+<arg>https://www.flipkart.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240102 18:19:03.485" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20240102 18:19:03.485" endtime="20240102 18:19:07.023"/>
-</kw>
-<status status="PASS" starttime="20240102 18:19:03.485" endtime="20240102 18:19:07.023"/>
+<msg timestamp="20240105 17:21:05.564" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com/'.</msg>
+<status status="PASS" starttime="20240105 17:21:05.564" endtime="20240105 17:21:09.112"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240102 18:19:07.026" endtime="20240102 18:19:07.152"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${element}</var>
-<value>1</value>
-<value>5</value>
-<iter>
-<var name="${element}">1</var>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${username}</var>
-<arg>${element}</arg>
-<arg>1</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20240102 18:19:07.160" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20240102 18:19:07.160" endtime="20240102 18:19:07.160"/>
-</kw>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${password}</var>
-<arg>${element}</arg>
-<arg>2</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20240102 18:19:07.168" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20240102 18:19:07.168" endtime="20240102 18:19:07.168"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${element}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240102 18:19:07.168" level="INFO">1</msg>
-<status status="PASS" starttime="20240102 18:19:07.168" endtime="20240102 18:19:07.168"/>
+<status status="PASS" starttime="20240105 17:21:09.112" endtime="20240105 17:21:09.247"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder="Username"]</arg>
-<arg>${username}</arg>
+<arg>${searchproduct}</arg>
+<arg>stationery</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:07.176" level="INFO">Typing text 'standard_user' into text field '//input[@placeholder="Username"]'.</msg>
-<status status="PASS" starttime="20240102 18:19:07.168" endtime="20240102 18:19:07.521"/>
+<msg timestamp="20240105 17:21:09.249" level="INFO">Typing text 'stationery' into text field '//input[@title="Search for Products, Brands and More"]'.</msg>
+<status status="PASS" starttime="20240105 17:21:09.248" endtime="20240105 17:21:09.709"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>//input[@placeholder="Password"]</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:07.530" level="INFO">Typing password into text field '//input[@placeholder="Password"]'.</msg>
-<msg timestamp="20240102 18:19:07.610" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20240102 18:19:07.768" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240102 18:19:07.521" endtime="20240102 18:19:07.768"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 17:21:13.724" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20240105 17:21:09.710" endtime="20240105 17:21:13.725"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>//input[@id="login-button"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:07.768" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
-<status status="PASS" starttime="20240102 18:19:07.768" endtime="20240102 18:19:08.035"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${searchproduct}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240105 17:21:13.730" level="INFO">Sending key(s) ('ENTER',) to //input[@title="Search for Products, Brands and More"] element.</msg>
+<msg timestamp="20240105 17:21:14.048" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20240105 17:21:14.049" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20240105 17:21:13.727" endtime="20240105 17:21:15.495"/>
 </kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.open('https://www.saucedemo.com/')</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20240102 18:19:08.035" level="INFO">Executing JavaScript:
-window.open('https://www.saucedemo.com/')
-Without any arguments.</msg>
-<status status="PASS" starttime="20240102 18:19:08.035" endtime="20240102 18:19:08.113"/>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" starttime="20240105 17:21:15.496" endtime="20240105 17:21:15.502"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${next_product}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240105 17:21:15.506" endtime="20240105 17:21:15.563"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${next_product}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240105 17:21:15.565" level="INFO">Clicking element '(//a[contains (text(),'Nutshell Vibrant Colors Fluorescent Paper 400 Sheets 3 ...')])[1]'.</msg>
+<status status="PASS" starttime="20240105 17:21:15.564" endtime="20240105 17:21:15.765"/>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
-<arg>New</arg>
+<arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20240102 18:19:08.113" endtime="20240102 18:19:08.161"/>
+<status status="PASS" starttime="20240105 17:21:15.766" endtime="20240105 17:21:15.785"/>
 </kw>
-<status status="PASS" starttime="20240102 18:19:07.152" endtime="20240102 18:19:08.161"/>
-</iter>
-<iter>
-<var name="${element}">2</var>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${username}</var>
-<arg>${element}</arg>
-<arg>1</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20240102 18:19:08.161" level="INFO">${username} = locked_out_user</msg>
-<status status="PASS" starttime="20240102 18:19:08.161" endtime="20240102 18:19:08.161"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 17:21:20.802" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240105 17:21:15.787" endtime="20240105 17:21:20.803"/>
 </kw>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${password}</var>
-<arg>${element}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.body.style.zoom="95%"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 17:21:20.808" level="INFO">Executing JavaScript:
+document.body.style.zoom="95%"
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 17:21:20.805" endtime="20240105 17:21:20.951"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1200</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20240105 17:21:20.954" endtime="20240105 17:21:21.213"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addtocart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240105 17:21:21.215" endtime="20240105 17:21:21.306"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addtocart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240105 17:21:21.310" level="INFO">Clicking element '//button[@class="_2KpZ6l _2U9uOA _3v1-ww"]'.</msg>
+<status status="PASS" starttime="20240105 17:21:21.307" endtime="20240105 17:21:21.427"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 17:21:21.430" endtime="20240105 17:21:21.617"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20240102 18:19:08.161" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20240102 18:19:08.161" endtime="20240102 18:19:08.161"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${element}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240102 18:19:08.169" level="INFO">2</msg>
-<status status="PASS" starttime="20240102 18:19:08.161" endtime="20240102 18:19:08.169"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder="Username"]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:08.174" level="INFO">Typing text 'locked_out_user' into text field '//input[@placeholder="Username"]'.</msg>
-<status status="PASS" starttime="20240102 18:19:08.169" endtime="20240102 18:19:08.613"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>//input[@placeholder="Password"]</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:08.616" level="INFO">Typing password into text field '//input[@placeholder="Password"]'.</msg>
-<msg timestamp="20240102 18:19:08.717" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20240102 18:19:08.935" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240102 18:19:08.613" endtime="20240102 18:19:08.935"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>//input[@id="login-button"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:08.942" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
-<status status="PASS" starttime="20240102 18:19:08.942" endtime="20240102 18:19:09.114"/>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 17:21:23.624" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240105 17:21:21.619" endtime="20240105 17:21:23.624"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.open('https://www.saucedemo.com/')</arg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20240102 18:19:09.114" level="INFO">Executing JavaScript:
-window.open('https://www.saucedemo.com/')
+<msg timestamp="20240105 17:21:23.629" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
 Without any arguments.</msg>
-<status status="PASS" starttime="20240102 18:19:09.114" endtime="20240102 18:19:09.165"/>
+<status status="PASS" starttime="20240105 17:21:23.627" endtime="20240105 17:21:23.651"/>
 </kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>New</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20240102 18:19:09.173" endtime="20240102 18:19:09.254"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 17:21:28.657" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240105 17:21:23.654" endtime="20240105 17:21:28.658"/>
 </kw>
-<status status="PASS" starttime="20240102 18:19:08.161" endtime="20240102 18:19:09.254"/>
-</iter>
-<iter>
-<var name="${element}">3</var>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${username}</var>
-<arg>${element}</arg>
-<arg>1</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20240102 18:19:09.254" level="INFO">${username} = problem_user</msg>
-<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:09.254"/>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>not</arg>
+<arg>${element_clicked}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<msg timestamp="20240105 17:21:28.658" level="FAIL">Evaluating expression 'not' failed: SyntaxError: unexpected EOF while parsing (&lt;string&gt;, line 1)</msg>
+<status status="FAIL" starttime="20240105 17:21:28.658" endtime="20240105 17:21:28.658"/>
 </kw>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${password}</var>
-<arg>${element}</arg>
-<arg>2</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20240102 18:19:09.254" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:09.254"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${validate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240105 17:21:28.658" endtime="20240105 17:21:28.658"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${element}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240102 18:19:09.254" level="INFO">3</msg>
-<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:09.254"/>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${element_clicked}</arg>
+<arg>${True}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" starttime="20240105 17:21:28.673" endtime="20240105 17:21:28.673"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder="Username"]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:09.257" level="INFO">Typing text 'problem_user' into text field '//input[@placeholder="Username"]'.</msg>
-<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:09.517"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 17:21:28.673" endtime="20240105 17:21:28.673"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>//input[@placeholder="Password"]</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:09.517" level="INFO">Typing password into text field '//input[@placeholder="Password"]'.</msg>
-<msg timestamp="20240102 18:19:09.602" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20240102 18:19:09.774" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240102 18:19:09.517" endtime="20240102 18:19:09.774"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${remove}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240105 17:21:28.682" endtime="20240105 17:21:28.682"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>//input[@id="login-button"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:09.774" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
-<status status="PASS" starttime="20240102 18:19:09.774" endtime="20240102 18:19:09.915"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.open('https://www.saucedemo.com/')</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20240102 18:19:09.919" level="INFO">Executing JavaScript:
-window.open('https://www.saucedemo.com/')
-Without any arguments.</msg>
-<status status="PASS" starttime="20240102 18:19:09.915" endtime="20240102 18:19:09.986"/>
-</kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>New</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20240102 18:19:09.986" endtime="20240102 18:19:10.044"/>
-</kw>
-<status status="PASS" starttime="20240102 18:19:09.254" endtime="20240102 18:19:10.044"/>
-</iter>
-<iter>
-<var name="${element}">4</var>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${username}</var>
-<arg>${element}</arg>
-<arg>1</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20240102 18:19:10.044" level="INFO">${username} = performance_glitch_user</msg>
-<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:10.044"/>
-</kw>
-<kw name="Read Excel Cell" library="ExcelLibrary">
-<var>${password}</var>
-<arg>${element}</arg>
-<arg>2</arg>
-<doc>Returns content of a cell.</doc>
-<msg timestamp="20240102 18:19:10.044" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:10.044"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${element}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240102 18:19:10.044" level="INFO">4</msg>
-<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:10.044"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder="Username"]</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:10.044" level="INFO">Typing text 'performance_glitch_user' into text field '//input[@placeholder="Username"]'.</msg>
-<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:10.437"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>//input[@placeholder="Password"]</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:10.441" level="INFO">Typing password into text field '//input[@placeholder="Password"]'.</msg>
-<msg timestamp="20240102 18:19:10.526" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20240102 18:19:10.652" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240102 18:19:10.437" endtime="20240102 18:19:10.652"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>//input[@id="login-button"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240102 18:19:10.659" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
-<status status="PASS" starttime="20240102 18:19:10.652" endtime="20240102 18:19:15.791"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.open('https://www.saucedemo.com/')</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20240102 18:19:15.793" level="INFO">Executing JavaScript:
-window.open('https://www.saucedemo.com/')
-Without any arguments.</msg>
-<status status="PASS" starttime="20240102 18:19:15.793" endtime="20240102 18:19:15.862"/>
-</kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>New</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20240102 18:19:15.862" endtime="20240102 18:19:15.953"/>
-</kw>
-<status status="PASS" starttime="20240102 18:19:10.044" endtime="20240102 18:19:15.953"/>
-</iter>
-<status status="PASS" starttime="20240102 18:19:07.152" endtime="20240102 18:19:15.953"/>
-</for>
-<status status="PASS" starttime="20240102 18:19:03.464" endtime="20240102 18:19:15.963"/>
+<status status="FAIL" starttime="20240105 17:21:05.564" endtime="20240105 17:21:28.682">Evaluating expression 'not' failed: SyntaxError: unexpected EOF while parsing (&lt;string&gt;, line 1)</status>
 </test>
-<status status="PASS" starttime="20240102 18:19:02.300" endtime="20240102 18:19:15.967"/>
+<status status="FAIL" starttime="20240105 17:21:05.371" endtime="20240105 17:21:28.690"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Excel">Excel</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Newews">Newews</stat>
 </suite>
 </statistics>
 <errors>

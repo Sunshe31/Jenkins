@@ -11,3 +11,7 @@ passdata1="secret_sauce"
 # New keyword
 phones="phones"
 cellphonedata="6"
+
+##Dominos 
+browser="chrome"
+place="guindy"

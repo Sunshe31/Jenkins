@@ -56,3 +56,47 @@ saved='//button[@data-label="Save"]'
 actions='//div[@class="actions-btn-group"]'
 
 
+# Flipkart task
+searchproduct='//input[@title="Search for Products, Brands and More"]'
+product='//a[@title="ASRYD U1 Universal Car Suv Bike LED Light Motorcycle Fog Lamps Mini Driving Lights Fog Lamp Motorbike, Car LED (12 V, 20 W)"]'
+addtocart='//button[@class="_2KpZ6l _2U9uOA _3v1-ww"]'
+anotherproduct="//a[contains (text(),'Otoroys 2 Led Auxiliary Spot Lights 40W Projector Fog L...')]"
+newproduct="(//div[contains (text(),'APPLE iPhone 14 (Blue, 128 GB)')])[1]"
+another_new_product="(//div[contains (text(),'POCO C55 (Forest Green, 64 GB)')])"
+next_product="(//a[contains (text(),'Nutshell Vibrant Colors Fluorescent Paper 400 Sheets 3 ...')])[1]"
+next1_product="//a[contains (text(),'MANTRA Mfs 100 With RD Payment Device, Access Control, ...')]"
+cart="(//span[contains (text(),'Cart')])[1]"
+validate="(//div[contains(text(),'Remove')])[1]"
+remove='//div[@class="_3dsJAO _24d-qY FhkMJZ"]'
+
+##Dominos Pizza Web page
+browserxpath='https://pizzaonline.dominos.co.in/menu'
+drop='(//div[@class="injectStyles-sc-1jy9bcf-0 ebOjDJ"])[1]'
+regular='//li[@value="6"]'
+medium='//li[@value="7"]'
+small='//li[@value="8"]'
+like='(//div[@class="injectStyles-sc-1jy9bcf-0 iwmcbq"])[1]'
+add='(//button[@data-label="addTocart"])[1]'
+increase='(//div[@class="injectStyles-sc-1jy9bcf-0 gwKvJy"])[4]'
+checkout='//button[@data-label="miniCartCheckout"]'
+change='(//div[@class="injectStyles-sc-1jy9bcf-0 bnglEO"])[1]'
+locate='//input[@placeholder="Enter Area / Locality"]'
+located="(//span[contains(text(),'Guindy Railway Station Bus Stop')])[1]"
+newlauch='(//div[@data-label="New Launches"])[1]'
+vegpizza='(//div[@data-label="Veg Pizza"])[1]'
+nonvegpizza='(//div[@data-label="Non-Veg Pizza"])[1]'
+beverages='(//div[@data-label="Beverages"])[1]'
+garlic='(//div[@data-label="Garlic Breads & More"])[1]'
+pizzamania='(//div[@data-label="Pizza Mania"])[1]'
+valuecombo='(//div[@data-label="Value Combos"])[1]'
+desserts='(//div[@data-label="Desserts"])[1]'
+gourmet='(//div[@data-label="Gourmet Pizza"])[1]'
+home='//div[@class="hamburger"]'
+order='//li[@data-label="Order History-leftnav"]'
+home='//div[@class="hamburger"]'
+deals='//li[@data-label="Deals & Offers-leftnav"]'
+menu='//li[@data-label="Menu-leftnav"]'
+everyday='//li[@data-label="Everyday Value Offers-leftnav"]'
+feedback='//li[@data-label="Feedback-leftnav"]'
+reco='(//div[@data-label="Recommended"])[1]'
+popup_locator='//div[@id="moe-osm-pusher"]'
