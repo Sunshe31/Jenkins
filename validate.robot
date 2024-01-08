@@ -8,7 +8,7 @@ ${data}    aishu
 
 *** Test Cases ***
 Validate
-    Open Browser    https://dashboard.getsauce.com/    edge
+    Open Browser    https://dashboard.getsauce.com/    chrome
     Maximize Browser Window
     Input Text    ${xpath}    ${data}
     ${text}    Get Value    ${xpath}

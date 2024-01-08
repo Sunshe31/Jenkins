@@ -8,7 +8,7 @@ Library    SeleniumLibrary
 *** Test Cases ***
 Global SQA  
     
-    Open Browser    https://www.globalsqa.com/cheatsheets/
+    Open Browser    https://www.globalsqa.com/cheatsheets/    chrome
     # Maximize Browser Window
     FOR    ${element}    IN    @{a}
         Wait Until Page Contains Element    ${element}

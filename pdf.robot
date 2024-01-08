@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${PDF}    newpdf01.pdf
 ${WEBPAGE}    https://www.saucedemo.com/
-${BROWSER}    edge
+${BROWSER}    chrome
 
 *** Keywords ***
 keyword

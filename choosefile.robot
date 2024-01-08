@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 Choose the file  
-    Open Browser    https://the-internet.herokuapp.com/upload 
+    Open Browser    https://the-internet.herokuapp.com/upload    chrome
     Wait Until Page Contains Element    //input[@id="file-upload"]
     Sleep    5
     Choose File    //input[@id="file-upload"]    ${EXECDIR}/example.robot

@@ -9,7 +9,7 @@ ${check}    (//input[@type="checkbox"])[2]
 
 *** Test Cases ***
 Check box
-    Open Browser    https://the-internet.herokuapp.com/
+    Open Browser    https://the-internet.herokuapp.com/    chrome
     Click Element    //a[@href="/checkboxes"]
 
     IF    $check == $uncheck
