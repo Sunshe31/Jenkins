@@ -15,25 +15,25 @@ keyword
 *** Test Cases ***
 AutomateWithPDF
     keyword
-    Open PDF    ${PDF}
-    ${dict}    Get Text From PDF
+    # Open PDF    ${PDF}
+    # ${dict}    Get Text From PDF
     
-    ${pdftext}    Set Variable    ${dict[1]}    #1 defines as key 
-    
-    
-    FOR    ${counter}    IN RANGE    0    5
-    ${username}    Set Variable    ${pdftext.split('\n')[${counter}]}
-    ${password}    Set Variable    ${pdftext.split('\n')[${counter}]}
+    # ${pdftext}    Set Variable    ${dict[1]}    #1 defines as key 
     
     
-    Log     ${username}
-    Log     ${password}
+    # FOR    ${counter}    IN RANGE    0    5
+    # ${username}    Set Variable    ${pdftext.split('\n')[${counter}]}
+    # ${password}    Set Variable    ${pdftext.split('\n')[${counter}]}
     
     
-    Input Text    //input[@placeholder="Username"]    ${username}
-    Input Password    //input[@placeholder="Password"]    ${password}
-    Click Button    //input[@id="login-button"]
-    Execute JavaScript    window.open('https://www.saucedemo.com/')
-    Switch Window    NEW   
+    # Log     ${username}
+    # Log     ${password}
     
-    END
+    
+    # Input Text    //input[@placeholder="Username"]    ${username}
+    # Input Password    //input[@placeholder="Password"]    ${password}
+    # Click Button    //input[@id="login-button"]
+    # Execute JavaScript    window.open('https://www.saucedemo.com/')
+    # Switch Window    NEW   
+    
+    # END

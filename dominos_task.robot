@@ -10,7 +10,7 @@ Variables    abspath/data.py
 
 *** Test Cases ***
 Dominos Pizza Web page to automate
-    Open Browser    ${browserxpath}    ${browser}
+    Open Browser    ${browserxpath}    ${browser}    options=add_argument("--incognito")
     Maximize Browser Window
     Sleep    4
     Reload Page

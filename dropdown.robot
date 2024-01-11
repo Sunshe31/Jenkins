@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    XML
+
 
 *** Variables ***
 @{remove}    //button[contains (text() , 'Remove/add')]

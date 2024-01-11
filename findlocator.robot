@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    BuiltIn
 
 *** Variables ***
 ${right}    //button[@type="submit"] 
