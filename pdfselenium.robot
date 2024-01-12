@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${PDF}    newpdf01.pdf
+${PDF}    C:\\Users\\Archimedis Digital\\Robot Framework\\Jenkins\\newpdf01.pdf
 ${WEBPAGE}    https://www.saucedemo.com/
 ${BROWSER}    chrome
 
@@ -14,7 +14,7 @@ keyword
 *** Test Cases ***
 AutomateWithPDF
     keyword
-    ${set}     Execute JavaScript    window.open('newpdf01.pdf')
+    ${set}     Execute JavaScript    window.open('${PDF}')
     ${dict}     Execute Javascript    return document.body.innerText    #getting text from pdf
     Log    ${dict}
 

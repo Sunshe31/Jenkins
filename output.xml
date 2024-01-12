@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20240112 15:42:00.360" rpa="false" schemaversion="4">
+<suite id="s1" name="Json Changes Dictionary" source="c:\Users\Archimedis Digital\Robot Framework\json_changes_dictionary.robot">
+<test id="s1-t1" name="Json Change given name and Id once updated" line="8">
+<kw name="Load JSON from file" library="RPA.JSON">
+<var>${file_path}</var>
+<arg>json_changes_dictionary.json</arg>
+<doc>Load JSON data from a file, and return it as JSON serializable object.
+Depending on the input file the object can be either a dictionary,
+a list, or a scalar value.</doc>
+<msg timestamp="20240112 15:42:00.624" level="INFO">Loading JSON from file: json_changes_dictionary.json</msg>
+<msg timestamp="20240112 15:42:00.624" level="INFO">${file_path} = {'name': 'Aishwarya', 'id': '2', 'date': '2024-01-12 15:41:40.518'}</msg>
+<status status="PASS" starttime="20240112 15:42:00.624" endtime="20240112 15:42:00.632"/>
+</kw>
+<kw name="Get value from JSON" library="RPA.JSON">
+<var>${get_name}</var>
+<arg>${file_path}</arg>
+<arg>name</arg>
+<doc>Get a single value from a JSON serializable object that matches the given expression.</doc>
+<msg timestamp="20240112 15:42:00.633" level="INFO">Get value from JSON with expression: 'name'</msg>
+<msg timestamp="20240112 15:42:00.712" level="INFO">${get_name} = Aishwarya</msg>
+<status status="PASS" starttime="20240112 15:42:00.633" endtime="20240112 15:42:00.712"/>
+</kw>
+<kw name="Get value from JSON" library="RPA.JSON">
+<var>${get_id}</var>
+<arg>${file_path}</arg>
+<arg>id</arg>
+<doc>Get a single value from a JSON serializable object that matches the given expression.</doc>
+<msg timestamp="20240112 15:42:00.725" level="INFO">Get value from JSON with expression: 'id'</msg>
+<msg timestamp="20240112 15:42:00.767" level="INFO">${get_id} = 2</msg>
+<status status="PASS" starttime="20240112 15:42:00.712" endtime="20240112 15:42:00.767"/>
+</kw>
+<kw name="Get value from JSON" library="RPA.JSON">
+<var>${get_date}</var>
+<arg>${file_path}</arg>
+<arg>date</arg>
+<doc>Get a single value from a JSON serializable object that matches the given expression.</doc>
+<msg timestamp="20240112 15:42:00.767" level="INFO">Get value from JSON with expression: 'date'</msg>
+<msg timestamp="20240112 15:42:00.817" level="INFO">${get_date} = 2024-01-12 15:41:40.518</msg>
+<status status="PASS" starttime="20240112 15:42:00.767" endtime="20240112 15:42:00.817"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${create}</var>
+<arg>name=${get_name}</arg>
+<arg>id=${get_id}</arg>
+<arg>date=${get_date}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240112 15:42:00.817" level="INFO">${create} = {'name': 'Aishwarya', 'id': '2', 'date': '2024-01-12 15:41:40.518'}</msg>
+<status status="PASS" starttime="20240112 15:42:00.817" endtime="20240112 15:42:00.817"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${updated_name}</var>
+<arg>Sunshe</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240112 15:42:00.824" level="INFO">${updated_name} = Sunshe</msg>
+<status status="PASS" starttime="20240112 15:42:00.824" endtime="20240112 15:42:00.824"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${updated_id}</var>
+<arg>2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240112 15:42:00.832" level="INFO">${updated_id} = 2</msg>
+<status status="PASS" starttime="20240112 15:42:00.830" endtime="20240112 15:42:00.832"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${datee}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20240112 15:42:00.832" level="INFO">${datee} = 2024-01-12 15:42:00.832</msg>
+<status status="PASS" starttime="20240112 15:42:00.832" endtime="20240112 15:42:00.832"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${updated_date}</var>
+<arg>${datee}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240112 15:42:00.841" level="INFO">${updated_date} = 2024-01-12 15:42:00.832</msg>
+<status status="PASS" starttime="20240112 15:42:00.832" endtime="20240112 15:42:00.841"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${updated_json}</var>
+<arg>name=${updated_name}</arg>
+<arg>id=${updated_id}</arg>
+<arg>date=${updated_date}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240112 15:42:00.847" level="INFO">${updated_json} = {'name': 'Sunshe', 'id': '2', 'date': '2024-01-12 15:42:00.832'}</msg>
+<status status="PASS" starttime="20240112 15:42:00.841" endtime="20240112 15:42:00.848"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${create}</arg>
+<arg>name=${updated_name}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20240112 15:42:00.848" endtime="20240112 15:42:00.852"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${create}</arg>
+<arg>id=${updated_id}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20240112 15:42:00.852" endtime="20240112 15:42:00.857"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${create}</arg>
+<arg>date=${updated_date}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20240112 15:42:00.857" endtime="20240112 15:42:00.857"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${json_content_updated}</var>
+<arg>json.dumps(${updated_json})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240112 15:42:00.857" level="INFO">${json_content_updated} = {"name": "Sunshe", "id": "2", "date": "2024-01-12 15:42:00.832"}</msg>
+<status status="PASS" starttime="20240112 15:42:00.857" endtime="20240112 15:42:00.857"/>
+</kw>
+<kw name="Save JSON to file" library="RPA.JSON">
+<arg>${json_content_updated}</arg>
+<arg>json_changes_dictionary.json</arg>
+<doc>Save a JSON serializable object or a string containing
+a JSON value into a file.</doc>
+<msg timestamp="20240112 15:42:00.865" level="INFO">Saving JSON to file: json_changes_dictionary.json</msg>
+<status status="PASS" starttime="20240112 15:42:00.865" endtime="20240112 15:42:00.865"/>
+</kw>
+<status status="PASS" starttime="20240112 15:42:00.624" endtime="20240112 15:42:00.872"/>
+</test>
+<status status="PASS" starttime="20240112 15:42:00.376" endtime="20240112 15:42:00.874"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Json Changes Dictionary">Json Changes Dictionary</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

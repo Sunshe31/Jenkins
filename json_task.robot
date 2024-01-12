@@ -5,8 +5,8 @@ Library    JSONLibrary
 *** Test Cases ***
 Json file update 
     ${load}    Load Json From File    json_task.json
-    ${json}    Get Value From Json    ${load}    name
-    ${replace}    Update Value To Json    ${load}    name    c
+    ${json}    Get Value From Json    ${load}    name1
+    ${replace}    Update Value To Json    ${load}    name1    c
     Dump Json To File    json_task.json    ${replace}
 
     
