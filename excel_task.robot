@@ -5,6 +5,31 @@ Library    SeleniumLibrary
 ${excel}    C:\\Users\\Archimedis Digital\\Robot Framework\\robotframeworktableexcel.xlsx
 
 *** Test Cases ***
+
+My Test
+    Open Browser    https://the-internet.herokuapp.com/upload    chrome
+    Maximize Browser Window
+    ${set}     Execute JavaScript    window.open('${excel}')
+    ${dict}     Execute Javascript    return document.body.innerText    #getting text from pdf
+    Log    ${dict}
+    
+
+    FOR    ${element}    IN RANGE    1    5
+        ${username}=    Set Variable    ${dict}
+        ${password}=    Set Variable    ${dict}
+        
+    END    
+
+    Log    ${username}   
+    Log    ${password}  
+
+
+
+
+
+
+
+    
 # Upload File and Extract Table Data
 #     Open Browser    https://the-internet.herokuapp.com/upload    chrome
 #     Maximize Browser Window
@@ -31,16 +56,3 @@ ${excel}    C:\\Users\\Archimedis Digital\\Robot Framework\\robotframeworktablee
 
 #     Close Browser
 
-My Test
-    Open Browser    https://the-internet.herokuapp.com/upload    chrome
-    Maximize Browser Window
-    ${choose}    Choose File    id=file-upload    C:\\Users\\Archimedis Digital\\Robot Framework\\robotframeworktableexcel.xlsx
-    Log    ${choose}
-    
-    ${action}    Get Action Chain Delay
-
-    FOR    ${element}    IN RANGE    1    5
-        ${username}=    Get Text    ${choose}/td[1]
-        ${password}=    Get Text    ${choose}/td[1]
-        Log    ${username}    ${password}
-    END

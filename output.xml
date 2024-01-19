@@ -1,125 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20240112 15:42:00.360" rpa="false" schemaversion="4">
-<suite id="s1" name="Json Changes Dictionary" source="c:\Users\Archimedis Digital\Robot Framework\json_changes_dictionary.robot">
-<test id="s1-t1" name="Json Change given name and Id once updated" line="8">
-<kw name="Load JSON from file" library="RPA.JSON">
-<var>${file_path}</var>
-<arg>json_changes_dictionary.json</arg>
-<doc>Load JSON data from a file, and return it as JSON serializable object.
-Depending on the input file the object can be either a dictionary,
-a list, or a scalar value.</doc>
-<msg timestamp="20240112 15:42:00.624" level="INFO">Loading JSON from file: json_changes_dictionary.json</msg>
-<msg timestamp="20240112 15:42:00.624" level="INFO">${file_path} = {'name': 'Aishwarya', 'id': '2', 'date': '2024-01-12 15:41:40.518'}</msg>
-<status status="PASS" starttime="20240112 15:42:00.624" endtime="20240112 15:42:00.632"/>
+<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20240118 10:19:14.527" rpa="false" schemaversion="4">
+<suite id="s1" name="Bank" source="c:\Users\Archimedis Digital\Robot Framework\bank.robot">
+<test id="s1-t1" name="Bank statement" line="7">
+<kw name="Open Pdf" library="RPA.PDF">
+<var>${pdf_content}</var>
+<arg>bank.pdf</arg>
+<doc>Open a PDF document for reading.</doc>
+<msg timestamp="20240118 10:19:17.081" level="INFO">${pdf_content} = None</msg>
+<status status="PASS" starttime="20240118 10:19:17.076" endtime="20240118 10:19:17.091"/>
 </kw>
-<kw name="Get value from JSON" library="RPA.JSON">
-<var>${get_name}</var>
-<arg>${file_path}</arg>
-<arg>name</arg>
-<doc>Get a single value from a JSON serializable object that matches the given expression.</doc>
-<msg timestamp="20240112 15:42:00.633" level="INFO">Get value from JSON with expression: 'name'</msg>
-<msg timestamp="20240112 15:42:00.712" level="INFO">${get_name} = Aishwarya</msg>
-<status status="PASS" starttime="20240112 15:42:00.633" endtime="20240112 15:42:00.712"/>
+<kw name="Generate Key" library="RPA.Crypto">
+<var>${password}</var>
+<doc>Generate a Fernet encryption key as base64 string.</doc>
+<msg timestamp="20240118 10:19:17.092" level="INFO">Protecting keyword: RPA.Crypto.Generate Key</msg>
+<msg timestamp="20240118 10:19:17.092" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240118 10:19:17.092" endtime="20240118 10:19:17.092"/>
 </kw>
-<kw name="Get value from JSON" library="RPA.JSON">
-<var>${get_id}</var>
-<arg>${file_path}</arg>
-<arg>id</arg>
-<doc>Get a single value from a JSON serializable object that matches the given expression.</doc>
-<msg timestamp="20240112 15:42:00.725" level="INFO">Get value from JSON with expression: 'id'</msg>
-<msg timestamp="20240112 15:42:00.767" level="INFO">${get_id} = 2</msg>
-<status status="PASS" starttime="20240112 15:42:00.712" endtime="20240112 15:42:00.767"/>
+<kw name="Use Encryption Key" library="RPA.Crypto">
+<var>${use}</var>
+<arg>${password}</arg>
+<doc>Set key for all following encryption/decryption operations.</doc>
+<msg timestamp="20240118 10:19:17.098" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
+<msg timestamp="20240118 10:19:17.102" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240118 10:19:17.098" endtime="20240118 10:19:17.098"/>
 </kw>
-<kw name="Get value from JSON" library="RPA.JSON">
-<var>${get_date}</var>
-<arg>${file_path}</arg>
-<arg>date</arg>
-<doc>Get a single value from a JSON serializable object that matches the given expression.</doc>
-<msg timestamp="20240112 15:42:00.767" level="INFO">Get value from JSON with expression: 'date'</msg>
-<msg timestamp="20240112 15:42:00.817" level="INFO">${get_date} = 2024-01-12 15:41:40.518</msg>
-<status status="PASS" starttime="20240112 15:42:00.767" endtime="20240112 15:42:00.817"/>
+<kw name="Log" library="BuiltIn">
+<arg>${use}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240118 10:19:17.106" level="INFO">None</msg>
+<status status="PASS" starttime="20240118 10:19:17.106" endtime="20240118 10:19:17.106"/>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${create}</var>
-<arg>name=${get_name}</arg>
-<arg>id=${get_id}</arg>
-<arg>date=${get_date}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20240112 15:42:00.817" level="INFO">${create} = {'name': 'Aishwarya', 'id': '2', 'date': '2024-01-12 15:41:40.518'}</msg>
-<status status="PASS" starttime="20240112 15:42:00.817" endtime="20240112 15:42:00.817"/>
+<kw name="Encrypt Pdf" library="RPA.PDF">
+<arg>${pdf_content}</arg>
+<arg>${password}</arg>
+<doc>Encrypt a PDF document.</doc>
+<status status="PASS" starttime="20240118 10:19:17.106" endtime="20240118 10:19:17.183"/>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${updated_name}</var>
-<arg>Sunshe</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240112 15:42:00.824" level="INFO">${updated_name} = Sunshe</msg>
-<status status="PASS" starttime="20240112 15:42:00.824" endtime="20240112 15:42:00.824"/>
+<kw name="Get Text From Pdf" library="RPA.PDF">
+<var>${get}</var>
+<doc>Get text from set of pages in source PDF document.</doc>
+<msg timestamp="20240118 10:19:18.644" level="INFO">${get} = {1: 'CONSOLIDATED STATEMENTCUSTOMER ID\nSTATEMENT PERIOD : 01-OCT-2023 to 31-OCT-2023: 6216862922Ms. Sunsheaishwarya A1/E288 Nehru Street Periyar Nagar,\nVaradharajapuram Kancheepuram,\nKancheepuram,\...</msg>
+<status status="PASS" starttime="20240118 10:19:17.183" endtime="20240118 10:19:18.644"/>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${updated_id}</var>
-<arg>2</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240112 15:42:00.832" level="INFO">${updated_id} = 2</msg>
-<status status="PASS" starttime="20240112 15:42:00.830" endtime="20240112 15:42:00.832"/>
+<kw name="Log" library="BuiltIn">
+<arg>${get}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240118 10:19:18.644" level="INFO">{1: 'CONSOLIDATED STATEMENTCUSTOMER ID\nSTATEMENT PERIOD : 01-OCT-2023 to 31-OCT-2023: 6216862922Ms. Sunsheaishwarya A1/E288 Nehru Street Periyar Nagar,\nVaradharajapuram Kancheepuram,\nKancheepuram,\nTamil Nadu - 600048\nIndia\nMOBILE NO   :******** 1857\nLANDLINE NO :******** 7207\nEMAIL ID : A*******a@archimedis.ioSUMMARY OF YOUR RELATIONSHIP WITH US AS OF 31-OCT-2023Account Type\n  Savings\n  Current\n  Fixed Deposit\n  Recurring DepositBalance\nINR 1.00 CR\nNA\nNA\nNAAccount Type\n   LoansBalance\nNATRANSACTION ACCOUNTSSAVINGS ACCOUNT DETAILS FOR A/C : 10137888246Opening Balance\n(INR)\n26.00 CRNumber of\nWithdrawals\n044Number of Deposits Withdrawals016(INR)\n41,788.00Deposits\n(INR)\n41,763.00Closing Balance\n(INR)\n1.00 CRDate and Time Value DateTransaction DetailsRef/Cheque\nNo.Withdrawals \n(INR)Deposits \n(INR)Balance \n(INR)01 Oct 23 09:55\n01 Oct 23 10:21\n01 Oct 23 10:23\n01 Oct 23 22:17\n02 Oct 23 14:13\n02 Oct 23 14:1701 Oct 23\n01 Oct 23\n01 Oct 23\n01 Oct 23\n02 Oct 23\n02 Oct 2303 Oct 23 19:4003 Oct 2303 Oct 23 20:03\n03 Oct 23 20:05\n03 Oct 23 20:30\n03 Oct 23 20:50\n04 Oct 23 07:31\n04 Oct 23 07:32\n04 Oct 23 09:59\n04 Oct 23 10:0203 Oct 23\n03 Oct 23\n03 Oct 23\n03 Oct 23\n04 Oct 23\n04 Oct 23\n04 Oct 23\n04 Oct 23opening balance\nUPI/MOB/364020714598/UPI\nUPI/MOB/327431159063/UPI\nUPI/MOB/327431227638/UPI\nUPI/MOB/327457437981/UPI\nUPI/MOB/327572049889/UPI\nUPI/MOB/327572250875/UPI\nBLKIFT/BLKPAY_20231003/Sept\nember Salary\nUPI/MOB/327696529712/UPI\nUPI/MOB/327647524223/UPI\nUPI/MOB/327699489974/UPI\nUPI/MOB/327600398099/UPI\nUPI/MOB/327726089703/UPI\nUPI/MOB/327726104609/UPI\nUPI/MOB/364301831708/UPI\nUPI/MOB/364317431634/UPI50.00100.0026.00 CR\n76.00 CR\n26.00 CR\n6.00 CR\n0.00 CR\n100.00 CR\n0.00 CR18,077.0018,077.00 CR2,000.008,077.00 CR\n7,877.00 CR\n7,857.00 CR\n9,857.00 CR\n9,710.00 CR\n9,471.00 CR\n4,471.00 CR\n4,441.00 CR50.00\n20.00\n6.00100.0010,000.00\n200.00\n20.00147.00\n239.00\n5,000.00\n30.00REGISTERED OFFICE: IDFC FIRST BANK LIMITED, KRM Tower, 7th Floor, No. 1, Harrington Road, Chetpet,\nChennai-600031, Tamil Nadu, INDIA.Page 1 of 4', 2: 'CONSOLIDATED STATEMENTCUSTOMER ID\nSTATEMENT PERIOD : 01-OCT-2023 to 31-OCT-2023: 6216862922Date and Time Value DateTransaction DetailsRef/Cheque\nNo.Withdrawals \n(INR)Deposits \n(INR)Balance \n(INR)04 Oct 23 18:3404 Oct 2304 Oct 23 18:4104 Oct 2304 Oct 23 19:36\n05 Oct 23 21:42\n06 Oct 23 10:25\n07 Oct 23 07:59\n08 Oct 23 08:12\n08 Oct 23 08:24\n08 Oct 23 08:24\n08 Oct 23 08:25\n09 Oct 23 11:16\n09 Oct 23 11:55\n10 Oct 23 20:41\n10 Oct 23 20:43\n10 Oct 23 20:47\n10 Oct 23 20:50\n11 Oct 23 10:36\n11 Oct 23 12:49\n11 Oct 23 19:14\n12 Oct 23 10:01\n12 Oct 23 14:39\n12 Oct 23 15:24\n13 Oct 23 18:28\n13 Oct 23 18:34\n13 Oct 23 18:41\n13 Oct 23 18:43\n13 Oct 23 18:49\n13 Oct 23 18:55\n15 Oct 23 17:43\n17 Oct 23 08:45\n17 Oct 23 20:56\n19 Oct 23 19:15\n20 Oct 23 14:41\n20 Oct 23 14:58\n20 Oct 23 19:24\n20 Oct 23 20:27\n22 Oct 23 10:34\n22 Oct 23 16:43\n23 Oct 23 10:41\n23 Oct 23 16:07\n24 Oct 23 19:43\n24 Oct 23 20:08\n27 Oct 23 09:58\n28 Oct 23 22:1004 Oct 23\n05 Oct 23\n06 Oct 23\n07 Oct 23\n08 Oct 23\n08 Oct 23\n08 Oct 23\n08 Oct 23\n09 Oct 23\n09 Oct 23\n10 Oct 23\n10 Oct 23\n10 Oct 23\n10 Oct 23\n11 Oct 23\n11 Oct 23\n11 Oct 23\n12 Oct 23\n12 Oct 23\n12 Oct 23\n13 Oct 23\n13 Oct 23\n13 Oct 23\n13 Oct 23\n13 Oct 23\n13 Oct 23\n15 Oct 23\n17 Oct 23\n17 Oct 23\n19 Oct 23\n20 Oct 23\n20 Oct 23\n20 Oct 23\n20 Oct 23\n22 Oct 23\n22 Oct 23\n23 Oct 23\n23 Oct 23\n24 Oct 23\n24 Oct 23\n27 Oct 23\n28 Oct 2331 Oct 23 02:2531 Oct 23POS-VISA/SIVASAKTHI\nSUPER/327713858075/CHENN\nAI/13:04:30\nPOS-VISA/ADYAR SAKTHI\nTRADERS/327713007983/CHE\nNNAI/13:11:50\nUPI/MOB/327701767595/UPI\nUPI/MOB/327877516076/UPI\nUPI/MOB/327997530389/UPI\nUPI/MOB/328024222429/UPI\nUPI/MOB/328147418813/UPI\nUPI/MOB/328163298822/UPI\nUPI/MOB/328163337715/UPI\nUPI/MOB/328163347388/UPI\nUPI/MOB/328288978865/UPI\nUPI/MOB/328205322015/UPI\nUPI/MOB/328344965856/milk\nUPI/MOB/328384654376/UPI\nUPI/MOB/328345340945/UPI\nUPI/MOB/328359115971/UPI\nUPI/MOB/328455779537/UPI\nUPI/MOB/328472678452/UPI\nUPI/MOB/328485004575/UPI\nUPI/MOB/365151716878/UPI\nUPI/MOB/365125033235/UPI\nUPI/MOB/328515749887/UPI\nUPI/MOB/365273698570/UPI\nUPI/MOB/365224592290/UPI\nUPI/MOB/328635395377/UPI\nUPI/MOB/328675496840/UPI\nUPI/MOB/365249095220/milk\nUPI/MOB/365279897839/UPI\nUPI/MOB/328879830047/UPI\nUPI/MOB/365633709245/UPI\nUPI/MOB/329020761463/NA\nUPI/MOB/329228030964/UPI\nUPI/MOB/329351831911/UPI\nUPI/MOB/329382066066/UPI\nUPI/MOB/365909371416/UPI\nUPI/MOB/365996377685/UPI\nUPI/MOB/329550466442/UPI\nUPI/MOB/329583379991/UPI\nUPI/MOB/366220907132/UPI\nUPI/MOB/329641436872/UPI\nUPI/MOB/329704098951/UPI\nUPI/MOB/329743402932/UPI\nUPI/MOB/330097537051/UPI\nUPI/MOB/330152670515/UPI\nMONTHLY SAVINGS\nINTEREST CREDIT443.001,520.00100.00\n2,000.00\n30.00\n100.002,000.00\n2,000.00\n1,000.0015,000.00\n40.0050.00\n180.00\n30.00\n350.00\n25.00257.00\n50.00\n50.00\n52.0055.00\n35.00\n20.0020.00\n100.00100.00\n50.00\n100.00\n19.0050.00\n50.0050.00\n50.005,000.0015,000.00500.00101.00\n400.003.00100.00\n1.00230.00100.00100.003,998.00 CR2,478.00 CR2,378.00 CR\n378.00 CR\n348.00 CR\n248.00 CR\n5,248.00 CR\n3,248.00 CR\n1,248.00 CR\n248.00 CR\n15,248.00 CR\n248.00 CR\n208.00 CR\n708.00 CR\n658.00 CR\n478.00 CR\n448.00 CR\n98.00 CR\n73.00 CR\n174.00 CR\n574.00 CR\n317.00 CR\n267.00 CR\n217.00 CR\n165.00 CR\n168.00 CR\n113.00 CR\n78.00 CR\n58.00 CR\n158.00 CR\n159.00 CR\n139.00 CR\n39.00 CR\n269.00 CR\n169.00 CR\n119.00 CR\n19.00 CR\n0.00 CR\n100.00 CR\n50.00 CR\n0.00 CR\n100.00 CR\n50.00 CR\n0.00 CR1.001.00 CREgattur Branch\nFirst floor, D Square,145/ 6A2,,6A3,\nEgattur,,Chennai\nIDFB0080107\n600751008\n29-MAY-2023\nACTIVE\nINRCUSTOMER NAME Ms. Sunsheaishwarya A\nACCOUNT NAME\nNOMINATIONMs. Sunsheaishwarya  A     \nNOT REGISTEREDACCOUNT BRANCH\nBRANCH ADDRESSIFSC\nMICR\nACCOUNT OPENING DATE\nACCOUNT STATUS\nCURRENCYREGISTERED OFFICE: IDFC FIRST BANK LIMITED, KRM Tower, 7th Floor, No. 1, Harrington Road, Chetpet,\nChennai-600031, Tamil Nadu, INDIA.Page 2 of 4', 3: 'CONSOLIDATED STATEMENTCUSTOMER ID\nSTATEMENT PERIOD : 01-OCT-2023 to 31-OCT-2023: 6216862922If your Aadhaar is 10 year old, please update your Proof of Identity and Proof of Address documents.To update, please visit your nearest Aadhaar Center or visit https://myaadhaar.uidai.gov.in to upload the documents.REGISTERED OFFICE: IDFC FIRST BANK LIMITED, KRM Tower, 7th Floor, No. 1, Harrington Road, Chetpet,\nChennai-600031, Tamil Nadu, INDIA.Page 3 of 4', 4: "CONSOLIDATED STATEMENTCUSTOMER ID\nSTATEMENT PERIOD : 01-OCT-2023 to 31-OCT-2023: 6216862922IMPORTANT MESSAGE• The closing balance as shown in this statement includes all cheques but does not include any holds, overdraft limits or linked deposits. Therefore, yourclosing balance may not always be equal to the effective available balance in your account. If you have any questions around this, please get in touch with our \nbanker on call.\n'Value Date'is the effective date of a debit or credit to your account. This may not be the same as the actual transaction date.•\n• The maturity value of your RD is calculated assuming that all subsequent payments to your deposit are made as per your initial RD plan.\n•IDFC FIRST Bank never sends requests for your internet banking user name, password, debit or credit card numbers, bank account numbers or any other \nsensitive information by email. If you ever receive something of this sort, which appears to be from the bank, please do not respond. Instead, forward the \nemail to banker@idfcfirstbank.comso we can address the issue. NRI Customers please e-mail nriservices@idfcfirstbank.com• Your Deposit accounts are covered under deposit insurance scheme of DICGC, upto Rs. Five lakh. Refer www.dicgc.org.in  for details.\n• As per notification dated April 6, 2018, RBI has advised that, Bank shall not deal in Virtual Currencies (VCs) or provide services for facilitating any person orentity in dealing with or settling VCs. IDFC FIRST Bank does not encourage its customers to use their accounts maintained with us for carrying out \ntransactions involving any kind of virtual/ crypto currencies and hence, we request you to refrain from transactions involving dealing in Bitcoin or any other \nvirtual/ crypto currencies.• We also wish to advise you that if transactions relating to any kind of VCs are witnessed in your account, the Bank may be constrained to close youraccount, as per RBI notification dated April 6, 2018.• This statement is a system generated output and requires no signature.\n• For any further information, please visit us at www.idfcfirstbank.com\n• Your debit card offers free Personal accident, Air accident, Lost card and purchase protection cover by meeting certain eligibility criteria. We request you torefer the welcome letter / emailer received at the time of account opening or visit \nhttps://www.idfcfirstbank.com/personal-banking/payments/cards/debit-card  or call us at 180010888 to know more.IMPORTANT SAFETY TIPS• Do not transact at ATM, if you find any suspicious device attached to the ATM machine.\n• Never sign blank cheques. Sign cheques only after filling up all details completely.\n• Never share your card number, PIN, CVV, OTP, internet banking User ID, password or URN with anyone on phone, even if the caller claims to be a bankemployee. Sharing these details can lead to fraud in your account.Contact us :Reach our Banker on Call at 1800 419 4332 or banker@idfcfirstbank.comCOMMONLY USED ABBREVIATIONSAccount to Account\nAutomated Teller Machine\nCredit\nCard Verification Value\nDebit\nFixed Deposit\nFund Transfer\nFund Transfer Reversal\nFund Transfer\nInfrastructure Development Finance Company\nIndian Financial System Code\nInternet Fund Transfer\nImmediate Payment ServiceA2A\nATM\nCR\nCVV\nDR\nFD\nFT\nFT-REV\nFund Trf\nIDFC\nIFSC\nIFT\nIMPS\nIMPS-CIB IMPS Corporate Internet Banking\nIMPS-INET Immediate Payment Service Internet Banking\nIMPS-RIB Immediate Payment Service Retail Internet Banking\nMICR\nNEFT\nOTP\nPIN\nPOS\nRD\nRTGS\nSI\nTPT\nTRF\nTXN\nUPI\nURNMagnetic Ink Character Recognition\nNational Electronic Funds Transfer\nOne Time Password\nPersonal Identification Number\nPoint of Sale\nRecurring Deposit\nReal Time Gross Settlement systems\nStanding Instruction\nThird Party Transfer\nTransfer\nTransaction\nUnified Payment Interface\nUnique Reference Number------- End of the statement -------REGISTERED OFFICE: IDFC FIRST BANK LIMITED, KRM Tower, 7th Floor, No. 1, Harrington Road, Chetpet,\nChennai-600031, Tamil Nadu, INDIA.Page 4 of 4"}</msg>
+<status status="PASS" starttime="20240118 10:19:18.644" endtime="20240118 10:19:18.647"/>
 </kw>
-<kw name="Get Current Date" library="DateTime">
-<var>${datee}</var>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<msg timestamp="20240112 15:42:00.832" level="INFO">${datee} = 2024-01-12 15:42:00.832</msg>
-<status status="PASS" starttime="20240112 15:42:00.832" endtime="20240112 15:42:00.832"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${updated_date}</var>
-<arg>${datee}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240112 15:42:00.841" level="INFO">${updated_date} = 2024-01-12 15:42:00.832</msg>
-<status status="PASS" starttime="20240112 15:42:00.832" endtime="20240112 15:42:00.841"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${updated_json}</var>
-<arg>name=${updated_name}</arg>
-<arg>id=${updated_id}</arg>
-<arg>date=${updated_date}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20240112 15:42:00.847" level="INFO">${updated_json} = {'name': 'Sunshe', 'id': '2', 'date': '2024-01-12 15:42:00.832'}</msg>
-<status status="PASS" starttime="20240112 15:42:00.841" endtime="20240112 15:42:00.848"/>
-</kw>
-<kw name="Set To Dictionary" library="Collections">
-<arg>${create}</arg>
-<arg>name=${updated_name}</arg>
-<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20240112 15:42:00.848" endtime="20240112 15:42:00.852"/>
-</kw>
-<kw name="Set To Dictionary" library="Collections">
-<arg>${create}</arg>
-<arg>id=${updated_id}</arg>
-<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20240112 15:42:00.852" endtime="20240112 15:42:00.857"/>
-</kw>
-<kw name="Set To Dictionary" library="Collections">
-<arg>${create}</arg>
-<arg>date=${updated_date}</arg>
-<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20240112 15:42:00.857" endtime="20240112 15:42:00.857"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${json_content_updated}</var>
-<arg>json.dumps(${updated_json})</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240112 15:42:00.857" level="INFO">${json_content_updated} = {"name": "Sunshe", "id": "2", "date": "2024-01-12 15:42:00.832"}</msg>
-<status status="PASS" starttime="20240112 15:42:00.857" endtime="20240112 15:42:00.857"/>
-</kw>
-<kw name="Save JSON to file" library="RPA.JSON">
-<arg>${json_content_updated}</arg>
-<arg>json_changes_dictionary.json</arg>
-<doc>Save a JSON serializable object or a string containing
-a JSON value into a file.</doc>
-<msg timestamp="20240112 15:42:00.865" level="INFO">Saving JSON to file: json_changes_dictionary.json</msg>
-<status status="PASS" starttime="20240112 15:42:00.865" endtime="20240112 15:42:00.865"/>
-</kw>
-<status status="PASS" starttime="20240112 15:42:00.624" endtime="20240112 15:42:00.872"/>
+<status status="PASS" starttime="20240118 10:19:17.076" endtime="20240118 10:19:18.649"/>
 </test>
-<status status="PASS" starttime="20240112 15:42:00.376" endtime="20240112 15:42:00.874"/>
+<status status="PASS" starttime="20240118 10:19:14.536" endtime="20240118 10:19:18.649"/>
 </suite>
 <statistics>
 <total>
@@ -128,7 +59,7 @@ a JSON value into a file.</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Json Changes Dictionary">Json Changes Dictionary</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Bank">Bank</stat>
 </suite>
 </statistics>
 <errors>
